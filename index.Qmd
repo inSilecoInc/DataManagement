@@ -1062,11 +1062,11 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ***Guiding Questions***
 
-- Where will data be deposited for long-term preservation?  
-- Which repository/platforms (institutional, national, disciplinary)?  
-- How will datasets be cited and versioned?  
-- What is the expected retention period?  
-- How will sensitive/Indigenous data be preserved responsibly?  
+- Which trusted repository will be used for long-term preservation?
+- In which formats will data be archived?
+- What metadata standards will be used?
+- How will datasets be persistently identified and cited?
+- For how long will the data be preserved?
 
 *Goal: ensure your data remain usable and accessible well beyond the project*
 
@@ -1078,8 +1078,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 - **Trusted repositories** ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS
 - **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)  
 - **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core) 
-- **Licensing** ➡️ CC-BY, CC0, or custom terms  
-- **Persistent identifiers** ➡️ DOIs, ARKs for datasets  
+- **Persistent identifiers** ➡️ DOI, URI
 - **Retention period** ➡️ typically ≥ 5–10 years, ideally indefinite 
 
 
@@ -1098,7 +1097,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 - Deposit data at publication time, not years later  
 - Archive raw and processed data, link to analysis scripts  
 - Use repository versioning features instead of manual file names  
-- Assign clear licenses and access conditions (open, embargoed, restricted)  
 - Ensure alignment with FAIR & CARE principles
 :::
 :::
@@ -1186,9 +1184,8 @@ Metadata standards describe the data itself (context & discovery), while data st
 ***Guiding Questions***
 
 - Who can access the data, and when?  
-- How will data be cited?  
 - What license will govern reuse?  
-- Are there ethical, legal, or cultural restrictions?  
+- How will data be documented?
 
 *Goal: make data available in a way that is clear, usable, and responsible*
 
@@ -1201,7 +1198,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 - **Access conditions** ➡️ open, embargoed, or restricted  
 - **Licensing** ➡️ CC-BY, CC0, or custom terms  
-- **Citation practices** ➡️ DOIs or other PIDs, recommended citation text  
 - **Documentation** ➡️ metadata and README ensure others can reuse data  
 
 
@@ -1256,7 +1252,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 ### Special Considerations 
 
 ::: {style="font-size: 80%;"}
-- Sensitive or Indigenous data ➡️ respect CARE, OCAP®, and community protocols  
 - Commercially sensitive data ➡️ embargoes or restricted access  
 - Collaborations ➡️ phased sharing (internal first, open later)  
 :::
@@ -1292,12 +1287,10 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ***Guiding Questions***
 
-- Does the project involve human participants or PII?  
+- Are ethics approvals required?  
 - Will Indigenous knowledge or data be collected?  
-- Are ethics approvals required (REB/IRB, community review)?  
 - Who owns the data and how will IP be handled?  
-- Are there risks to safety, security, or sensitive ecosystems?  
-
+- Are there legal restrictions on the data?  
 
 ## Legal & ethics
 
@@ -1305,9 +1298,8 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ***Core Elements***
 
-- Ethics approvals (REB/IRB numbers, consent procedures)  
+- Ethics approvals (Research Ethics / Institutional Review Baords, community review)
 - Indigenous data sovereignty (CARE, OCAP®, NISR, community agreements)  
-- Sensitive data management (anonymization, restricted access, embargoes)  
 - Intellectual property (ownership, licensing, industry agreements)  
 - Legal compliance (Tri-Council, privacy acts, international obligations)  
 
@@ -1324,6 +1316,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 ### Good Practices
 
 ::: {style="font-size: 80%;"}
+- Sensitive or Indigenous data ➡️ respect CARE, OCAP®, and community protocols  
 - Clearly explain how participant rights are protected  
 - Use written data sharing agreements when applicable  
 - Consult community-led governance for Indigenous research  
@@ -1339,7 +1332,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 ::: {style="font-size: 80%;"}
 - Multiple institutions ➡️ align ethics and legal requirements  
 - Indigenous partners may require community-based repositories or controlled access  
-- ArcticNet requires reporting of security breaches within 24 hours 
 - Consider cross-border data transfer and compliance  
 :::
 :::

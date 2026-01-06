@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="inSileco">
   <title>Research Data Management</title>
@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f1376d11060272321dd1129bb042e933.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c4e4f9f929ca940a2f664cf23af93834.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -1266,14 +1266,14 @@ inSileco
 <h2>Documentation &amp; metadata</h2>
 <p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Dublin Core: Example Record</em></strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
 <span id="cb1-2"><a href=""></a>  &lt;<span class="kw">dc:title</span>&gt;Water Sampling Data 2025&lt;/<span class="kw">dc:title</span>&gt;</span>
 <span id="cb1-3"><a href=""></a>  &lt;<span class="kw">dc:creator</span>&gt;Smith, J.&lt;/<span class="kw">dc:creator</span>&gt;</span>
 <span id="cb1-4"><a href=""></a>  &lt;<span class="kw">dc:subject</span>&gt;Oceanography&lt;/<span class="kw">dc:subject</span>&gt;</span>
 <span id="cb1-5"><a href=""></a>  &lt;<span class="kw">dc:date</span>&gt;2025-04-15&lt;/<span class="kw">dc:date</span>&gt;</span>
 <span id="cb1-6"><a href=""></a>  &lt;<span class="kw">dc:format</span>&gt;CSV&lt;/<span class="kw">dc:format</span>&gt;</span>
 <span id="cb1-7"><a href=""></a>  &lt;<span class="kw">dc:identifier</span>&gt;doi:10.12345/abcd&lt;/<span class="kw">dc:identifier</span>&gt;</span>
-<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section></section>
 <section>
@@ -1465,15 +1465,11 @@ inSileco
 <p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Guiding Questions</em></strong></p>
 <ul>
-<li>Where will data be deposited for long-term preservation?<br>
-</li>
-<li>Which repository/platforms (institutional, national, disciplinary)?<br>
-</li>
-<li>How will datasets be cited and versioned?<br>
-</li>
-<li>What is the expected retention period?<br>
-</li>
-<li>How will sensitive/Indigenous data be preserved responsibly?</li>
+<li>Which trusted repository will be used for long-term preservation?</li>
+<li>In which formats will data be archived?</li>
+<li>What metadata standards will be used?</li>
+<li>How will datasets be persistently identified and cited?</li>
+<li>For how long will the data be preserved?</li>
 </ul>
 <p><em>Goal: ensure your data remain usable and accessible well beyond the project</em></p>
 </section>
@@ -1485,10 +1481,7 @@ inSileco
 <li><strong>Preservation formats</strong> ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)<br>
 </li>
 <li><strong>Metadata</strong> ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core)</li>
-<li><strong>Licensing</strong> ➡️ CC-BY, CC0, or custom terms<br>
-</li>
-<li><strong>Persistent identifiers</strong> ➡️ DOIs, ARKs for datasets<br>
-</li>
+<li><strong>Persistent identifiers</strong> ➡️ DOI, URI</li>
 <li><strong>Retention period</strong> ➡️ typically ≥ 5–10 years, ideally indefinite</li>
 </ul>
 </section>
@@ -1513,8 +1506,6 @@ inSileco
 <li>Archive raw and processed data, link to analysis scripts<br>
 </li>
 <li>Use repository versioning features instead of manual file names<br>
-</li>
-<li>Assign clear licenses and access conditions (open, embargoed, restricted)<br>
 </li>
 <li>Ensure alignment with FAIR &amp; CARE principles</li>
 </ul>
@@ -1617,11 +1608,9 @@ inSileco
 <ul>
 <li>Who can access the data, and when?<br>
 </li>
-<li>How will data be cited?<br>
-</li>
 <li>What license will govern reuse?<br>
 </li>
-<li>Are there ethical, legal, or cultural restrictions?</li>
+<li>How will data be documented?</li>
 </ul>
 <p><em>Goal: make data available in a way that is clear, usable, and responsible</em></p>
 </section>
@@ -1633,8 +1622,6 @@ inSileco
 <li><strong>Access conditions</strong> ➡️ open, embargoed, or restricted<br>
 </li>
 <li><strong>Licensing</strong> ➡️ CC-BY, CC0, or custom terms<br>
-</li>
-<li><strong>Citation practices</strong> ➡️ DOIs or other PIDs, recommended citation text<br>
 </li>
 <li><strong>Documentation</strong> ➡️ metadata and README ensure others can reuse data</li>
 </ul>
@@ -1699,8 +1686,6 @@ inSileco
 <div class="callout-content">
 <div style="font-size: 80%;">
 <ul>
-<li>Sensitive or Indigenous data ➡️ respect CARE, OCAP®, and community protocols<br>
-</li>
 <li>Commercially sensitive data ➡️ embargoes or restricted access<br>
 </li>
 <li>Collaborations ➡️ phased sharing (internal first, open later)<br>
@@ -1764,15 +1749,13 @@ inSileco
 </div>
 <p><strong><em>Guiding Questions</em></strong></p>
 <ul>
-<li>Does the project involve human participants or PII?<br>
+<li>Are ethics approvals required?<br>
 </li>
 <li>Will Indigenous knowledge or data be collected?<br>
 </li>
-<li>Are ethics approvals required (REB/IRB, community review)?<br>
-</li>
 <li>Who owns the data and how will IP be handled?<br>
 </li>
-<li>Are there risks to safety, security, or sensitive ecosystems?</li>
+<li>Are there legal restrictions on the data?</li>
 </ul>
 </section>
 <section id="legal-ethics-2" class="slide level2">
@@ -1780,11 +1763,8 @@ inSileco
 <p><img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Core Elements</em></strong></p>
 <ul>
-<li>Ethics approvals (REB/IRB numbers, consent procedures)<br>
-</li>
+<li>Ethics approvals (Research Ethics / Institutional Review Baords, community review)</li>
 <li>Indigenous data sovereignty (CARE, OCAP®, NISR, community agreements)<br>
-</li>
-<li>Sensitive data management (anonymization, restricted access, embargoes)<br>
 </li>
 <li>Intellectual property (ownership, licensing, industry agreements)<br>
 </li>
@@ -1807,6 +1787,8 @@ inSileco
 <div class="callout-content">
 <div style="font-size: 80%;">
 <ul>
+<li>Sensitive or Indigenous data ➡️ respect CARE, OCAP®, and community protocols<br>
+</li>
 <li>Clearly explain how participant rights are protected<br>
 </li>
 <li>Use written data sharing agreements when applicable<br>
@@ -1836,7 +1818,6 @@ inSileco
 </li>
 <li>Indigenous partners may require community-based repositories or controlled access<br>
 </li>
-<li>ArcticNet requires reporting of security breaches within 24 hours</li>
 <li>Consider cross-border data transfer and compliance<br>
 </li>
 </ul>
@@ -2161,7 +2142,7 @@ inSileco
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2235,14 +2216,13 @@ inSileco
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
