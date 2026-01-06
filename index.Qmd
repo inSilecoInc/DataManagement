@@ -599,17 +599,26 @@ Building your Data Management Plan
 
 # Practical Guide 
 
-## DMP Checklist
+## Goal
 
-:::{.callout-note}
-### Goal
-:::{.incremental}
-- *Equip researchers with concrete steps to manage data responsibly, efficiently, and in line with network & funder expectations.*
-- *At the end, you should know what steps to undertake to prepare and update an adequate Data Management Plan*
-:::
-:::
+<br>
 
-## DMP Checklist
+***Equip researchers with concrete steps to manage data responsibly, efficiently, and in line with network & funder expectations.***
+
+<br>
+
+***At the end, you should know what steps to undertake to prepare and update an adequate Data Management Plan***
+
+## Goal 
+
+***Let us create a DMP together. Let's start [here](https://tally.so/r/QKekoX).***
+
+<a href="https://tally.so/r/QKekoX" target="_blank">
+  <img src="img/tally.png">
+</a>
+
+
+## Checklist
 
 ::: {style="font-size: 90%;"}
 <i class="fa-regular fa-circle"></i> *Data collection*
@@ -635,6 +644,7 @@ Building your Data Management Plan
 -->
 
 
+
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # Data collection 
 
@@ -648,8 +658,6 @@ Building your Data Management Plan
 
 ::: {style="font-size: 80%;"}
 - What kinds of data will I collect?  
-- In which formats? Open or proprietary?  
-- How much data do I expect to generate?  
 - Which instruments, sensors, or methods will I use?  
 - How will I ensure quality control before, during, and after collection?  
 - How will I organize and label files?  
@@ -664,89 +672,14 @@ Building your Data Management Plan
 
 ::: {style="font-size: 80%;"}
 - **Types of data** ➡️ observational, experimental, computational, derived  
-- **Formats & standards** ➡️ e.g., CSV, NetCDF, TIFF, Darwin Core, ISO 19115  
-- **Volume & scale** ➡️ estimated GB/TB, number of samples/records  
 - **Collection methods & instruments** ➡️ field protocols, sensors, lab assays, software pipelines  
 - **Quality assurance / quality control** ➡️ calibration, duplicate samples, error-checking  
 - **Organization & naming** ➡️ consistent file/folder naming, controlled vocabularies  
-- **Documentation** ➡️ field sheets, lab notebooks, e-logs, linking samples to metadata  
 :::
 
 <img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
 
-## Data collection 
-
-***Some notes on file formats***
-
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {.callout-warning}
-### Avoid Proprietary & Unsuitable Formats  
-
-::: {style="font-size: 80%;"}
-- Not all formats are sustainable for long-term research data. Avoid using:  
-- Proprietary formats: require specific software that may become unavailable (ex. .xlsx, .shp, .sav, .psd, .docx with macros)
-- Formats with strong version-dependence: older/newer versions may be unreadable without exact software (ex. ArcGIS-only file types)  
-- Compressed / lossy formats: reduce data quality and limit reuse (ex. .jpg, .mp3)  
-- Encrypted or password-protected files: block discovery, reuse, and preservation workflows  
-
-**Rule of thumb:** if a file requires special software, or might lose information when saved, it’s not a good archival format.  
-:::
-:::
-:::
-
-::: {.column width="50%"}
-::: {.callout-tip}
-### Preferred Open Formats by Data Type  
-
-::: {style="font-size: 100%;"}
-- Tabular data ➡️ CSV, Parquet 
-- Spatial data ➡️ GeoPackage, GeoTIFF, NetCDF  
-- Images ➡️ TIFF (uncompressed), PNG  
-- Audio / Video ➡️ WAV, MP4 (H.264 codec)  
-- Text / Documents ➡️ TXT, PDF/A, XML, JSON  
-- Metadata ➡️ XML, JSON, standardized schemas (e.g., ISO 19115, Darwin Core)  
-
-- Choose formats that are:  
-  - Open & non-proprietary  
-  - Well-documented & widely supported  
-  - Sustainable for long-term preservation  
-:::
-:::
-:::
-
-::::
-
-<img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-## Data collection 
-
-***What are data standards?***
-
-::: {style="font-size: 80%;"}
-- Define how data is structured and formatted
-- Ensure datasets are consistent and interoperable across projects  
-- Often discipline-specific ➡️ adopt community norms  
-- Examples:  
-  - **Darwin Core** ➡️ biodiversity occurrence records  
-  - **NetCDF** ➡️ climate & oceanographic data  
-  - **FASTQ** ➡️ DNA sequencing reads  
-:::
-
-::: {.callout-note}
-### Data standards vs Metadata standards
-Data standards are closely related to metadata standards, but they serve different purposes. 
-
-See next section for Metadata standards.
-:::
-
-<img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-:::footer
-[FAIRsharing.org](https://fairsharing.org/)
-:::
 
 ## Data collection
 
@@ -811,9 +744,7 @@ See next section for Metadata standards.
 ::: {style="font-size: 80%;"}
 - How will I document my data so that others (or my future self) can understand it?  
 - Which metadata standard(s) will I use?  
-- Where and how will metadata be created and stored?  
 - When will metadata be created and updated?  
-- How will I ensure metadata uses controlled vocabularies and persistent IDs?  
 :::
 
 <img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
@@ -825,9 +756,7 @@ See next section for Metadata standards.
 ::: {style="font-size: 80%;"}
 - **Documentation practices** ➡️ lab/field notebooks, data dictionaries, README files, protocols  
 - **Metadata standards** ➡️ Dublin Core, ISO 19115, Darwin Core, DataCite Schema  
-- **Tools & platforms** ➡️ Borealis, FRDR, ISA tools  
 - **Timing** ➡️ start at project onset, update regularly, finalize at archiving  
-- **Interoperability** ➡️ controlled vocabularies, ontologies
 :::
 
 <img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
@@ -938,7 +867,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 ***Core Elements***
 
 - **Storage location** ➡️ institutional servers, certified cloud storage, external media  
-- **Backup strategy** ➡️ frequency, number of copies, locations (3-2-1 rule)  
+- **Backup strategy** ➡️ frequency, number of copies, locations 
 - **Access & security** ➡️ permissions, authentication, encryption  
 - **File integrity** ➡️ checksums, error detection  
 - **Scalability** ➡️ projected storage needs (GB/TB)  
@@ -1010,7 +939,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 - **Software & tools** ➡️ R, Python, MATLAB, ArcGIS, QGIS (note open vs proprietary)  
 - **Workflow documentation** ➡️ scripts, Jupyter notebooks, R Markdown, Quarto  
 - **Reproducibility** ➡️ version control (GitHub, GitLab), containers (Docker)  
-- **Data transformations** ➡️ raw vs processed datasets, cleaning methods, derived outputs  
 
 ## Data analysis
 
@@ -1064,7 +992,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 - Which trusted repository will be used for long-term preservation?
 - In which formats will data be archived?
-- What metadata standards will be used?
 - How will datasets be persistently identified and cited?
 - For how long will the data be preserved?
 
@@ -1075,9 +1002,8 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 <img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
-- **Trusted repositories** ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS
+- **Trusted repositories** ➡️ Borealis, FRDR, Dryad, Zenodo, GBIF, OBIS
 - **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)  
-- **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core) 
 - **Persistent identifiers** ➡️ DOI, URI
 - **Retention period** ➡️ typically ≥ 5–10 years, ideally indefinite 
 
@@ -1121,6 +1047,53 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 <img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
+***Some notes on file formats***
+
+:::: {.columns}
+
+::: {.column width="50%"}
+::: {.callout-warning}
+### Avoid Proprietary & Unsuitable Formats  
+
+::: {style="font-size: 80%;"}
+- Not all formats are sustainable for long-term research data. Avoid using:  
+- Proprietary formats: require specific software that may become unavailable (ex. .xlsx, .shp, .sav, .psd, .docx with macros)
+- Formats with strong version-dependence: older/newer versions may be unreadable without exact software (ex. ArcGIS-only file types)  
+- Compressed / lossy formats: reduce data quality and limit reuse (ex. .jpg, .mp3)  
+- Encrypted or password-protected files: block discovery, reuse, and preservation workflows  
+
+**Rule of thumb:** if a file requires special software, or might lose information when saved, it’s not a good archival format.  
+:::
+:::
+:::
+
+::: {.column width="50%"}
+::: {.callout-tip}
+### Preferred Open Formats by Data Type  
+
+::: {style="font-size: 100%;"}
+- Tabular data ➡️ CSV, Parquet 
+- Spatial data ➡️ GeoPackage, GeoTIFF, NetCDF  
+- Images ➡️ TIFF (uncompressed), PNG  
+- Audio / Video ➡️ WAV, MP4 (H.264 codec)  
+- Text / Documents ➡️ TXT, PDF/A, XML, JSON  
+- Metadata ➡️ XML, JSON, standardized schemas (e.g., ISO 19115, Darwin Core)  
+
+- Choose formats that are:  
+  - Open & non-proprietary  
+  - Well-documented & widely supported  
+  - Sustainable for long-term preservation  
+:::
+:::
+:::
+
+::::
+
+
+## Preservation & archiving
+
+<img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
+
 ***Persistent Identifiers (PIDs)***
 
 ::: {style="font-size: 80%;"}
@@ -1132,7 +1105,7 @@ Metadata standards describe the data itself (context & discovery), while data st
   - **ROR** ➡️ institutions  
   - **ARK / Handle** ➡️ digital objects  
 
-- Why important in DMPs & RDM?
+- Why are PIDs important  DMPs & RDM?
   - Ensure long-term findability and access  
   - Enable unambiguous attribution (linking people, projects, data)  
   - Facilitate interoperability across repositories and systems  
@@ -1155,7 +1128,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 ***Choose a repository that is:***
 
 - Trusted (certified, long-term sustainability)  
-- FAIR-aligned (metadata standards, PIDs)  
+- FAIR and TRUST-aligned (metadata standards, PIDs)  
 - Appropriate for your data type & community  
 
 :::footer
@@ -1225,8 +1198,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 [Choose a license](https://choosealicense.com/licenses/)
 :::
 
-<img src="img/sharing_reuse_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
 
 ## Sharing & reuse
 
@@ -1271,19 +1242,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 ## Legal & ethics
 
 <img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-::: {.callout-tip}
-### PII: Personally Identifiable Information
-:::
-
-::: {.callout-tip}
-### REB = Research Ethics Board
-:::
-
-::: {.callout-tip}
-### IRB = Institutional Review Board
-:::
-
 
 ***Guiding Questions***
 
@@ -1422,14 +1380,6 @@ Emerging Trends & Opportunities
 
 
 
-
-## Workflow 
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-![](img/data_flow.svg)
-
-
 # PART II 
 
 ## Data Hub
@@ -1486,3 +1436,11 @@ OCUL = Ontario Council of University Libraries
 > In Canada, Borealis is a national instance of the Dataverse repository hosted by OCUL's Scholars Portal at the University of Toronto.
 
 Support at Guelph at UoG library.
+
+
+## Workflow 
+
+<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
+
+![](img/data_flow.svg)
+

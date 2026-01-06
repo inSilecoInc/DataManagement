@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="inSileco">
   <title>Research Data Management</title>
@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f1376d11060272321dd1129bb042e933.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c4e4f9f929ca940a2f664cf23af93834.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -891,27 +891,20 @@ inSileco
 <h1>Practical Guide</h1>
 
 </section>
-<section id="dmp-checklist" class="slide level2">
-<h2>DMP Checklist</h2>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Goal</strong></p>
-</div>
-<div class="callout-content">
-<ul>
-<li class="fragment"><em>Equip researchers with concrete steps to manage data responsibly, efficiently, and in line with network &amp; funder expectations.</em></li>
-<li class="fragment"><em>At the end, you should know what steps to undertake to prepare and update an adequate Data Management Plan</em></li>
-</ul>
-</div>
-</div>
-</div>
+<section id="goal" class="slide level2">
+<h2>Goal</h2>
+<p><br></p>
+<p><strong><em>Equip researchers with concrete steps to manage data responsibly, efficiently, and in line with network &amp; funder expectations.</em></strong></p>
+<p><br></p>
+<p><strong><em>At the end, you should know what steps to undertake to prepare and update an adequate Data Management Plan</em></strong></p>
 </section>
-<section id="dmp-checklist-1" class="slide level2">
-<h2>DMP Checklist</h2>
+<section id="goal-1" class="slide level2">
+<h2>Goal</h2>
+<p><strong><em>Let us create a DMP together. Let’s start <a href="https://tally.so/r/QKekoX">here</a>.</em></strong></p>
+<p><a href="https://tally.so/r/QKekoX" target="_blank"> <img src="img/tally.png"> </a></p>
+</section>
+<section id="checklist" class="slide level2">
+<h2>Checklist</h2>
 <div style="font-size: 90%;">
 <p><i class="fa-regular fa-circle"></i> <em>Data collection</em></p>
 <p><i class="fa-regular fa-circle"></i> <em>Documentation &amp; metadata</em></p>
@@ -942,10 +935,6 @@ inSileco
 <ul>
 <li>What kinds of data will I collect?<br>
 </li>
-<li>In which formats? Open or proprietary?<br>
-</li>
-<li>How much data do I expect to generate?<br>
-</li>
 <li>Which instruments, sensors, or methods will I use?<br>
 </li>
 <li>How will I ensure quality control before, during, and after collection?<br>
@@ -963,132 +952,17 @@ inSileco
 <ul>
 <li><strong>Types of data</strong> ➡️ observational, experimental, computational, derived<br>
 </li>
-<li><strong>Formats &amp; standards</strong> ➡️ e.g., CSV, NetCDF, TIFF, Darwin Core, ISO 19115<br>
-</li>
-<li><strong>Volume &amp; scale</strong> ➡️ estimated GB/TB, number of samples/records<br>
-</li>
 <li><strong>Collection methods &amp; instruments</strong> ➡️ field protocols, sensors, lab assays, software pipelines<br>
 </li>
 <li><strong>Quality assurance / quality control</strong> ➡️ calibration, duplicate samples, error-checking<br>
 </li>
 <li><strong>Organization &amp; naming</strong> ➡️ consistent file/folder naming, controlled vocabularies<br>
 </li>
-<li><strong>Documentation</strong> ➡️ field sheets, lab notebooks, e-logs, linking samples to metadata<br>
-</li>
 </ul>
 </div>
 <p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 </section>
 <section id="data-collection-3" class="slide level2">
-<h2>Data collection</h2>
-<p><strong><em>Some notes on file formats</em></strong></p>
-<div class="columns">
-<div class="column" style="width:50%;">
-<div class="callout callout-warning callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Avoid Proprietary &amp; Unsuitable Formats</strong></p>
-</div>
-<div class="callout-content">
-<div style="font-size: 80%;">
-<ul>
-<li>Not all formats are sustainable for long-term research data. Avoid using:<br>
-</li>
-<li>Proprietary formats: require specific software that may become unavailable (ex. .xlsx, .shp, .sav, .psd, .docx with macros)</li>
-<li>Formats with strong version-dependence: older/newer versions may be unreadable without exact software (ex. ArcGIS-only file types)<br>
-</li>
-<li>Compressed / lossy formats: reduce data quality and limit reuse (ex. .jpg, .mp3)<br>
-</li>
-<li>Encrypted or password-protected files: block discovery, reuse, and preservation workflows</li>
-</ul>
-<p><strong>Rule of thumb:</strong> if a file requires special software, or might lose information when saved, it’s not a good archival format.</p>
-</div>
-</div>
-</div>
-</div>
-</div><div class="column" style="width:50%;">
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Preferred Open Formats by Data Type</strong></p>
-</div>
-<div class="callout-content">
-<div style="font-size: 100%;">
-<ul>
-<li><p>Tabular data ➡️ CSV, Parquet</p></li>
-<li><p>Spatial data ➡️ GeoPackage, GeoTIFF, NetCDF<br>
-</p></li>
-<li><p>Images ➡️ TIFF (uncompressed), PNG<br>
-</p></li>
-<li><p>Audio / Video ➡️ WAV, MP4 (H.264 codec)<br>
-</p></li>
-<li><p>Text / Documents ➡️ TXT, PDF/A, XML, JSON<br>
-</p></li>
-<li><p>Metadata ➡️ XML, JSON, standardized schemas (e.g., ISO 19115, Darwin Core)</p></li>
-<li><p>Choose formats that are:</p>
-<ul>
-<li>Open &amp; non-proprietary<br>
-</li>
-<li>Well-documented &amp; widely supported<br>
-</li>
-<li>Sustainable for long-term preservation<br>
-</li>
-</ul></li>
-</ul>
-</div>
-</div>
-</div>
-</div>
-</div></div>
-<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
-</section>
-<section id="data-collection-4" class="slide level2">
-<h2>Data collection</h2>
-<p><strong><em>What are data standards?</em></strong></p>
-<div style="font-size: 80%;">
-<ul>
-<li>Define how data is structured and formatted</li>
-<li>Ensure datasets are consistent and interoperable across projects<br>
-</li>
-<li>Often discipline-specific ➡️ adopt community norms<br>
-</li>
-<li>Examples:
-<ul>
-<li><strong>Darwin Core</strong> ➡️ biodiversity occurrence records<br>
-</li>
-<li><strong>NetCDF</strong> ➡️ climate &amp; oceanographic data<br>
-</li>
-<li><strong>FASTQ</strong> ➡️ DNA sequencing reads<br>
-</li>
-</ul></li>
-</ul>
-</div>
-<div class="callout callout-note callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Data standards vs Metadata standards</strong></p>
-</div>
-<div class="callout-content">
-<p>Data standards are closely related to metadata standards, but they serve different purposes.</p>
-<p>See next section for Metadata standards.</p>
-</div>
-</div>
-</div>
-<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
-<div class="footer">
-<p><a href="https://fairsharing.org/">FAIRsharing.org</a></p>
-</div>
-</section>
-<section id="data-collection-5" class="slide level2">
 <h2>Data collection</h2>
 <p><strong><em>Quality Assurance / Quality Control (QA/QC)</em></strong></p>
 <div style="font-size: 80%;">
@@ -1103,7 +977,7 @@ inSileco
 </div>
 <p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 </section>
-<section id="data-collection-6" class="slide level2">
+<section id="data-collection-4" class="slide level2">
 <h2>Data collection</h2>
 <p><strong><em>Organization &amp; naming</em></strong></p>
 <div style="font-size: 80%;">
@@ -1155,11 +1029,7 @@ inSileco
 </li>
 <li>Which metadata standard(s) will I use?<br>
 </li>
-<li>Where and how will metadata be created and stored?<br>
-</li>
 <li>When will metadata be created and updated?<br>
-</li>
-<li>How will I ensure metadata uses controlled vocabularies and persistent IDs?<br>
 </li>
 </ul>
 </div>
@@ -1174,11 +1044,8 @@ inSileco
 </li>
 <li><strong>Metadata standards</strong> ➡️ Dublin Core, ISO 19115, Darwin Core, DataCite Schema<br>
 </li>
-<li><strong>Tools &amp; platforms</strong> ➡️ Borealis, FRDR, ISA tools<br>
-</li>
 <li><strong>Timing</strong> ➡️ start at project onset, update regularly, finalize at archiving<br>
 </li>
-<li><strong>Interoperability</strong> ➡️ controlled vocabularies, ontologies</li>
 </ul>
 </div>
 <p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
@@ -1266,14 +1133,14 @@ inSileco
 <h2>Documentation &amp; metadata</h2>
 <p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Dublin Core: Example Record</em></strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
 <span id="cb1-2"><a href=""></a>  &lt;<span class="kw">dc:title</span>&gt;Water Sampling Data 2025&lt;/<span class="kw">dc:title</span>&gt;</span>
 <span id="cb1-3"><a href=""></a>  &lt;<span class="kw">dc:creator</span>&gt;Smith, J.&lt;/<span class="kw">dc:creator</span>&gt;</span>
 <span id="cb1-4"><a href=""></a>  &lt;<span class="kw">dc:subject</span>&gt;Oceanography&lt;/<span class="kw">dc:subject</span>&gt;</span>
 <span id="cb1-5"><a href=""></a>  &lt;<span class="kw">dc:date</span>&gt;2025-04-15&lt;/<span class="kw">dc:date</span>&gt;</span>
 <span id="cb1-6"><a href=""></a>  &lt;<span class="kw">dc:format</span>&gt;CSV&lt;/<span class="kw">dc:format</span>&gt;</span>
 <span id="cb1-7"><a href=""></a>  &lt;<span class="kw">dc:identifier</span>&gt;doi:10.12345/abcd&lt;/<span class="kw">dc:identifier</span>&gt;</span>
-<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section></section>
 <section>
@@ -1303,8 +1170,7 @@ inSileco
 <ul>
 <li><strong>Storage location</strong> ➡️ institutional servers, certified cloud storage, external media<br>
 </li>
-<li><strong>Backup strategy</strong> ➡️ frequency, number of copies, locations (3-2-1 rule)<br>
-</li>
+<li><strong>Backup strategy</strong> ➡️ frequency, number of copies, locations</li>
 <li><strong>Access &amp; security</strong> ➡️ permissions, authentication, encryption<br>
 </li>
 <li><strong>File integrity</strong> ➡️ checksums, error detection<br>
@@ -1400,9 +1266,7 @@ inSileco
 </li>
 <li><strong>Workflow documentation</strong> ➡️ scripts, Jupyter notebooks, R Markdown, Quarto<br>
 </li>
-<li><strong>Reproducibility</strong> ➡️ version control (GitHub, GitLab), containers (Docker)<br>
-</li>
-<li><strong>Data transformations</strong> ➡️ raw vs processed datasets, cleaning methods, derived outputs</li>
+<li><strong>Reproducibility</strong> ➡️ version control (GitHub, GitLab), containers (Docker)</li>
 </ul>
 </section>
 <section id="data-analysis-3" class="slide level2">
@@ -1467,7 +1331,6 @@ inSileco
 <ul>
 <li>Which trusted repository will be used for long-term preservation?</li>
 <li>In which formats will data be archived?</li>
-<li>What metadata standards will be used?</li>
 <li>How will datasets be persistently identified and cited?</li>
 <li>For how long will the data be preserved?</li>
 </ul>
@@ -1477,10 +1340,9 @@ inSileco
 <h2>Preservation &amp; archiving</h2>
 <p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <ul>
-<li><strong>Trusted repositories</strong> ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS</li>
+<li><strong>Trusted repositories</strong> ➡️ Borealis, FRDR, Dryad, Zenodo, GBIF, OBIS</li>
 <li><strong>Preservation formats</strong> ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)<br>
 </li>
-<li><strong>Metadata</strong> ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core)</li>
 <li><strong>Persistent identifiers</strong> ➡️ DOI, URI</li>
 <li><strong>Retention period</strong> ➡️ typically ≥ 5–10 years, ideally indefinite</li>
 </ul>
@@ -1541,6 +1403,75 @@ inSileco
 <section id="preservation-archiving-4" class="slide level2">
 <h2>Preservation &amp; archiving</h2>
 <p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Some notes on file formats</em></strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Avoid Proprietary &amp; Unsuitable Formats</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Not all formats are sustainable for long-term research data. Avoid using:<br>
+</li>
+<li>Proprietary formats: require specific software that may become unavailable (ex. .xlsx, .shp, .sav, .psd, .docx with macros)</li>
+<li>Formats with strong version-dependence: older/newer versions may be unreadable without exact software (ex. ArcGIS-only file types)<br>
+</li>
+<li>Compressed / lossy formats: reduce data quality and limit reuse (ex. .jpg, .mp3)<br>
+</li>
+<li>Encrypted or password-protected files: block discovery, reuse, and preservation workflows</li>
+</ul>
+<p><strong>Rule of thumb:</strong> if a file requires special software, or might lose information when saved, it’s not a good archival format.</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Preferred Open Formats by Data Type</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 100%;">
+<ul>
+<li><p>Tabular data ➡️ CSV, Parquet</p></li>
+<li><p>Spatial data ➡️ GeoPackage, GeoTIFF, NetCDF<br>
+</p></li>
+<li><p>Images ➡️ TIFF (uncompressed), PNG<br>
+</p></li>
+<li><p>Audio / Video ➡️ WAV, MP4 (H.264 codec)<br>
+</p></li>
+<li><p>Text / Documents ➡️ TXT, PDF/A, XML, JSON<br>
+</p></li>
+<li><p>Metadata ➡️ XML, JSON, standardized schemas (e.g., ISO 19115, Darwin Core)</p></li>
+<li><p>Choose formats that are:</p>
+<ul>
+<li>Open &amp; non-proprietary<br>
+</li>
+<li>Well-documented &amp; widely supported<br>
+</li>
+<li>Sustainable for long-term preservation<br>
+</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="preservation-archiving-5" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Persistent Identifiers (PIDs)</em></strong></p>
 <div style="font-size: 80%;">
 <ul>
@@ -1555,7 +1486,7 @@ inSileco
 </li>
 <li><strong>ARK / Handle</strong> ➡️ digital objects</li>
 </ul></li>
-<li><p>Why important in DMPs &amp; RDM?</p>
+<li><p>Why are PIDs important DMPs &amp; RDM?</p>
 <ul>
 <li>Ensure long-term findability and access<br>
 </li>
@@ -1569,7 +1500,7 @@ inSileco
 <p><em>Think of PIDs as the “barcodes” of research</em></p>
 </div>
 </section>
-<section id="preservation-archiving-5" class="slide level2">
+<section id="preservation-archiving-6" class="slide level2">
 <h2>Preservation &amp; archiving</h2>
 <p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Data repositories</em></strong></p>
@@ -1585,7 +1516,7 @@ inSileco
 <ul>
 <li>Trusted (certified, long-term sustainability)<br>
 </li>
-<li>FAIR-aligned (metadata standards, PIDs)<br>
+<li>FAIR and TRUST-aligned (metadata standards, PIDs)<br>
 </li>
 <li>Appropriate for your data type &amp; community</li>
 </ul>
@@ -1645,7 +1576,6 @@ inSileco
 <div class="footer">
 <p><a href="https://creativecommons.org/licenses/">Creative Commons Licenses</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/6.-Archive-Publish/Publishing-with-CESSDA-archives/Licensing-your-data">Data Management Expert Guide - Licensing your data</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.howtofair.dk/how-to-fair/data-licences">How to FAIR - Data licences</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://choosealicense.com/licenses/">Choose a license</a></p>
 </div>
-<p><img src="img/sharing_reuse_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 </section>
 <section id="sharing-reuse-4" class="slide level2">
 <h2>Sharing &amp; reuse</h2>
@@ -1708,45 +1638,6 @@ inSileco
 <section id="legal-ethics-1" class="slide level2">
 <h2>Legal &amp; ethics</h2>
 <p><img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>PII: Personally Identifiable Information</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>REB = Research Ethics Board</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
-<div class="callout callout-tip callout-titled callout-style-default">
-<div class="callout-body">
-<div class="callout-title">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>IRB = Institutional Review Board</strong></p>
-</div>
-<div class="callout-content">
-
-</div>
-</div>
-</div>
 <p><strong><em>Guiding Questions</em></strong></p>
 <ul>
 <li>Are ethics approvals required?<br>
@@ -1938,11 +1829,6 @@ inSileco
 </li>
 <li>FAIR-by-design = long-term visibility, collaboration, and impact</li>
 </ul>
-</section>
-<section id="workflow" class="slide level2">
-<h2>Workflow</h2>
-<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
-<p><img data-src="img/data_flow.svg"></p>
 </section></section>
 <section>
 <section id="part-ii" class="title-slide slide level1 center">
@@ -2001,6 +1887,11 @@ inSileco
 <p>In Canada, Borealis is a national instance of the Dataverse repository hosted by OCUL’s Scholars Portal at the University of Toronto.</p>
 </blockquote>
 <p>Support at Guelph at UoG library.</p>
+</section>
+<section id="workflow" class="slide level2">
+<h2>Workflow</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><img data-src="img/data_flow.svg"></p>
 
 </section></section>
     </div>
@@ -2192,7 +2083,7 @@ inSileco
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2266,14 +2157,13 @@ inSileco
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
