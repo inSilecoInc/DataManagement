@@ -1,0 +1,2774 @@
+<!DOCTYPE html>
+<html lang="en"><head>
+<script src="index_files/libs/clipboard/clipboard.min.js"></script>
+<script src="index_files/libs/quarto-html/tabby.min.js"></script>
+<script src="index_files/libs/quarto-html/popper.min.js"></script>
+<script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
+<link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.8.26">
+
+  <meta name="author" content="inSileco &amp; ArcticNet">
+  <meta name="dcterms.date" content="2025-09-03">
+  <title>Research Data Management</title>
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reset.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/reveal.css">
+  <style>
+    code{white-space: pre-wrap;}
+    span.smallcaps{font-variant: small-caps;}
+    div.columns{display: flex; gap: min(4vw, 1.5em);}
+    div.column{flex: auto; overflow-x: auto;}
+    div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+    ul.task-list{list-style: none;}
+    ul.task-list li input[type="checkbox"] {
+      width: 0.8em;
+      margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+      vertical-align: middle;
+    }
+    /* CSS for syntax highlighting */
+    html { -webkit-text-size-adjust: 100%; }
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; font-weight: bold; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; font-weight: bold; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
+  </style>
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f1376d11060272321dd1129bb042e933.css">
+  <link rel="stylesheet" href="styles.css">
+  <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
+  <link href="index_files/libs/revealjs/plugin/quarto-support/footer.css" rel="stylesheet">
+  <style type="text/css">
+    .reveal div.sourceCode {
+      margin: 0;
+      overflow: auto;
+    }
+    .reveal div.hanging-indent {
+      margin-left: 1em;
+      text-indent: -1em;
+    }
+    .reveal .slide:not(.center) {
+      height: 100%;
+    }
+    .reveal .slide.scrollable {
+      overflow-y: auto;
+    }
+    .reveal .footnotes {
+      height: 100%;
+      overflow-y: auto;
+    }
+    .reveal .slide .absolute {
+      position: absolute;
+      display: block;
+    }
+    .reveal .footnotes ol {
+      counter-reset: ol;
+      list-style-type: none; 
+      margin-left: 0;
+    }
+    .reveal .footnotes ol li:before {
+      counter-increment: ol;
+      content: counter(ol) ". "; 
+    }
+    .reveal .footnotes ol li > p:first-child {
+      display: inline-block;
+    }
+    .reveal .slide ul,
+    .reveal .slide ol {
+      margin-bottom: 0.5em;
+    }
+    .reveal .slide ul li,
+    .reveal .slide ol li {
+      margin-top: 0.4em;
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide ul[role="tablist"] li {
+      margin-bottom: 0;
+    }
+    .reveal .slide ul li > *:first-child,
+    .reveal .slide ol li > *:first-child {
+      margin-block-start: 0;
+    }
+    .reveal .slide ul li > *:last-child,
+    .reveal .slide ol li > *:last-child {
+      margin-block-end: 0;
+    }
+    .reveal .slide .columns:nth-child(3) {
+      margin-block-start: 0.8em;
+    }
+    .reveal blockquote {
+      box-shadow: none;
+    }
+    .reveal .tippy-content>* {
+      margin-top: 0.2em;
+      margin-bottom: 0.7em;
+    }
+    .reveal .tippy-content>*:last-child {
+      margin-bottom: 0.2em;
+    }
+    .reveal .slide > img.stretch.quarto-figure-center,
+    .reveal .slide > img.r-stretch.quarto-figure-center {
+      display: block;
+      margin-left: auto;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-left,
+    .reveal .slide > img.r-stretch.quarto-figure-left  {
+      display: block;
+      margin-left: 0;
+      margin-right: auto; 
+    }
+    .reveal .slide > img.stretch.quarto-figure-right,
+    .reveal .slide > img.r-stretch.quarto-figure-right  {
+      display: block;
+      margin-left: auto;
+      margin-right: 0; 
+    }
+  </style>
+  
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+</head>
+<body class="quarto-light">
+  <div class="reveal">
+    <div class="slides">
+
+<section id="title-slide" class="quarto-title-block center">
+  <h1 class="title">Research Data Management</h1>
+
+<div class="quarto-title-authors">
+<div class="quarto-title-author">
+<div class="quarto-title-author-name">
+inSileco &amp; ArcticNet 
+</div>
+</div>
+</div>
+
+  <p class="date">2025-09-03</p>
+</section>
+<section id="webinar-structure" class="slide level2">
+<h2>Webinar Structure</h2>
+<ol start="0" type="1">
+<li><strong><em>Welcome</em></strong> (5 min)</li>
+<li><strong><em>Why</em></strong> (10 min)</li>
+<li><strong><em>What</em></strong> (10 min)</li>
+<li><strong><em>When &amp; Who</em></strong> (10 min)</li>
+<li><strong><em>How to Guide</em></strong> (45 min)</li>
+<li><strong><em>Future</em></strong> (10 min)</li>
+<li><strong><em>Q&amp;A</em></strong> (10 min)</li>
+</ol>
+</section>
+<section>
+<section id="welcome" class="title-slide slide level1 center">
+<h1><em>Welcome</em></h1>
+
+</section>
+<section id="about-us" class="slide level2">
+<h2>About us</h2>
+<div style="font-size: 100%;">
+<p><a href="https://insileco.io/" target="_blank"><img data-src="img/who-we-are.png" style="width:100.0%"></a></p>
+</div>
+</section>
+<section id="about-us-1" class="slide level2">
+<h2>About us</h2>
+<div style="text-align: center;">
+<p><a href="https://insileco.io/" target="_blank"><img data-src="img/insileco.png" style="width:80.0%"></a></p>
+</div>
+</section>
+<section id="about-us-2" class="slide level2">
+<h2>About us</h2>
+<p><strong><em>inSileco</em></strong> &amp; <strong><em>ArcticNet</em></strong> <strong>(since 2023)</strong></p>
+<ul>
+<li>Develop criteria for project Data Management</li>
+<li>Review and provide feedback on project Data Management Plans</li>
+<li>Support researchers with RDM practices and tools</li>
+<li>Maintain and expand ArcticNet’s long-term data archive</li>
+<li>Deliver training and capacity building (e.g.&nbsp;this webinar)</li>
+</ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="why" class="title-slide slide level1 center">
+<h1><em>Why</em></h1>
+<p>Data &amp; Open Science</p>
+<p>10 min</p>
+</section>
+<section id="more-than-papers" class="slide level2">
+<h2>More than papers</h2>
+<ul>
+<li>More than papers ➡️ <a href="https://www.crossref.org/services/event-data/">Crossref Event Data</a></li>
+<li>Researchers produce a <strong>diversity of artefacts</strong>
+<ul>
+<li>🫙 protocols</li>
+<li>💻 code</li>
+<li>💾 <strong>datasets</strong> (observations, measurements, etc.)</li>
+<li>📢 public debates</li>
+</ul></li>
+<li>Datasets are
+<ul>
+<li>getting bigger</li>
+<li>getting more diversified</li>
+<li>now published standalone</li>
+</ul></li>
+</ul>
+</section>
+<section id="what-is-data" class="slide level2">
+<h2>What is “data”?</h2>
+<ul>
+<li>Broad definition: <strong>recorded information supporting research findings</strong>
+<ul>
+<li>could include various artefacts, e.g., 💻 code</li>
+</ul></li>
+<li>Data can be <strong>qualitative</strong> or <strong>quantitative</strong></li>
+<li>Data = information in a form that can be processed
+<ul>
+<li>often this means *structured collection of bits”</li>
+<li>the structure = format</li>
+<li>spreadsheet, images, etc.</li>
+</ul></li>
+<li>Useful lens: the <strong>5 V’s of Big Data</strong>
+<ul>
+<li><strong>Volume</strong>, <strong>Variety</strong>, Velocity, Veracity, and <strong>Value</strong></li>
+</ul></li>
+</ul>
+<div class="footer">
+<p><a href="https://www.ibm.com/think/topics/big-data">IBM website</a></p>
+</div>
+</section>
+<section id="data-explosion-volume" class="slide level2">
+<h2>Data explosion (Volume)</h2>
+<div class="columns">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>GBIF: Global Biodiversity Information Facility</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div><div class="column" style="width:60%;">
+<ul>
+<li>New questions &amp; horizons ➡️ more data<br>
+</li>
+<li>Powerful technologies/tools enabling unprecedented data collection<br>
+</li>
+<li>Ex: Large Hadron Collider ➡️ ~40 Zettabytes in 2017</li>
+<li>Ex: GBIF
+<ul>
+<li>125 million records in 2007</li>
+<li>1.6 billion in 2020</li>
+<li><strong>1,150% increase in just 13 years</strong></li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:40%;">
+<p><a href="img/datasphere.png"><img data-src="img/datasphere.png" style="width:100.0%"></a></p>
+<p><a href="img/bigData.png"><img data-src="img/bigData.png" style="width:100.0%"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://www.seagate.com/files/www-content/our-story/trends/files/idc-seagate-dataage-whitepaper.pdf">IDC–Seagate Data Age Whitepaper</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.seagate.com/files/www-content/our-story/trends/files/Seagate-WP-DataAge2025-March-2017.pdf">Seagate WP DataAge 2025</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.frontiersin.org/journals/big-data/articles/10.3389/fdata.2023.1271639/full">Clissa <em>et al.</em> 2023. <em>How big is Big Data?</em> Frontiers in Big Data</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.pnas.org/doi/10.1073/pnas.2018093118">Mason <em>et al.</em> 2021. <em>Data integration enables global biodiversity synthesis</em> PNAS</a></p>
+</div>
+</section>
+<section id="data-heterogeneity-variety" class="slide level2">
+<h2>Data heterogeneity (Variety)</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>Different objects, storage formats, technologies<br>
+</li>
+<li>Data vary widely across and within disciplines<br>
+</li>
+<li>Lack of standards hinders integration and reuse<br>
+</li>
+<li>Legacy practices (e.g., local storage) limit access and preservation<br>
+</li>
+<li>Prevalent in large Interdisciplinary Research Programs</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><a href="img/variety-of-big-data-sources.png"><img data-src="img/variety-of-big-data-sources.png" style="width:100.0%"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://www.columnfivemedia.com/work/infographic-intelligence-by-variety">ColumnFive Media</a></p>
+</div>
+</section>
+<section id="benefits-value" class="slide level2">
+<h2>Benefits (Value)</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li>We need reliable data to better understand and predict
+<ul>
+<li>anticipate/mitigate future changes</li>
+<li>Ex: good assessment of temperature and precipitation change</li>
+</ul></li>
+<li>Some data are hard to collect
+<ul>
+<li>Arctic Data are good examples</li>
+</ul></li>
+<li>Data are <strong>precious</strong> for future generations
+<ul>
+<li>We cannot collect past data</li>
+</ul></li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><a href="img/annual_report.png"><img data-src="img/annual_report.png" style="width:100.0%"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2023/10/rapport_annuel_arcticnet_2022-23_ENG.pdf">ArcticNet Annual Report 2022/23</a></p>
+</div>
+</section>
+<section id="open-science" class="slide level2">
+<h2>Open Science</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<ul>
+<li><strong>Open Science</strong>
+<ul>
+<li>research ➡️ transparent and accessible<br>
+</li>
+</ul></li>
+<li><strong>Open Access</strong>
+<ul>
+<li>publishing ➡️ results freely available<br>
+</li>
+</ul></li>
+<li><strong>Reproducible research</strong>
+<ul>
+<li>practices ➡️ trust &amp; verification</li>
+</ul></li>
+<li>Increasingly drives <strong>journal &amp; funder expectations</strong><br>
+</li>
+<li>Sets the stage for today’s <strong>policies and compliance frameworks</strong></li>
+<li>Requires robust data stewardship</li>
+</ul>
+</div><div class="column" style="width:30%;">
+<p><a href="img/unesco_open_science_full.png"><img data-src="img/unesco_open_science1.png" style="width:80.0%"></a> <a href="img/unesco_open_science_full.png"><img data-src="img/unesco_open_science2.png" style="width:80.0%"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://www.budapestopenaccessinitiative.org/">Budapest Open Access Initiative</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://direct.mit.edu/books/book/3754/Open-Access">Suber P. 2012. <em>Open Access</em></a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.unesco.org/en/open-science/toolkit">UNESCO’s Open Science Toolkit</a></p>
+</div>
+</section>
+<section id="why-this-matters-for-you" class="slide level2">
+<h2>Why this matters for you</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>IRP: Interdisciplinary Research Program</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<ul>
+<li>Data is now a <strong>primary research output</strong><br>
+</li>
+<li>Reduces risk of <strong>data loss or inaccessibility</strong><br>
+</li>
+<li>Proper management increases <strong>visibility &amp; citations</strong><br>
+</li>
+<li>Strengthens <strong>compliance</strong> with funders &amp; journals<br>
+</li>
+<li>Builds a foundation for <strong>collaboration in IRPs</strong>
+<ul>
+<li>data may be reuse in unexpected ways by colleagues</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-takeaways" class="slide level2">
+<h2>Key takeaways</h2>
+<ul>
+<li>Research outputs go <strong>beyond papers</strong> ➡️ <strong>data is central</strong><br>
+</li>
+<li>The <strong>explosion &amp; heterogeneity</strong> of data offers new horizons and create new technical challenges<br>
+</li>
+<li>The <strong>Open Science movement</strong> drives funder and journal expectations<br>
+</li>
+<li>For IRPs, effective data management enables <strong>collaboration, compliance, and visibility</strong><br>
+</li>
+<li>Data management is not just compliance — it is a <strong>path to better science</strong></li>
+</ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="what" class="title-slide slide level1 center">
+<h1><em>What</em></h1>
+<p>Definition, Policies &amp; Benefits</p>
+<p>10 min</p>
+</section>
+<section id="what-is-rdm" class="slide level2">
+<h2>What is RDM?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>RDM: Research Data Management</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div class="columns">
+<div class="column" style="width:55%;">
+<ul>
+<li><strong>Active management</strong> of research data across its lifecycle<br>
+</li>
+<li>Includes planning, documentation, storage, preservation, sharing<br>
+</li>
+<li>Ensures data are <strong>usable, accessible, trustworthy</strong><br>
+</li>
+<li>Encompasses both <strong>technical practices</strong> and <strong>governance</strong></li>
+</ul>
+</div><div class="column" style="width:45%;">
+<p><a href="img/dcc_lifecycle_model.jpg"><img data-src="img/dcc_lifecycle_model.jpg" style="width:100.0%"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://www.youtube.com/watch?v=Jm7qIkrL3wM">McGill video capsule</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions">Tri-Agency RDM Policy</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.dcc.ac.uk/guidance/curation-lifecycle-model">Digital Curation Centre</a></p>
+</div>
+</section>
+<section id="benefits-of-rdm" class="slide level2">
+<h2>Benefits of RDM</h2>
+<ul>
+<li>Greater <strong>visibility &amp; citations</strong> for datasets<br>
+</li>
+<li>Reduced <strong>risk of loss</strong> (backups, repositories)<br>
+</li>
+<li>Stronger <strong>collaboration &amp; integration</strong> across teams and institutions<br>
+</li>
+<li>Improved <strong>efficiency</strong> via organized workflows<br>
+</li>
+<li>Network-level governance fosters <strong>new synergies</strong><br>
+</li>
+<li>Enhanced <strong>credibility &amp; compliance</strong> with funders</li>
+</ul>
+</section>
+<section id="rdm-in-irps" class="slide level2">
+<h2>RDM in IRPs</h2>
+<ul>
+<li><strong>Scale &amp; complexity</strong>: multiple projects, teams, and disciplines<br>
+</li>
+<li><strong>Heterogeneity</strong>: diverse data types, methods, and formats<br>
+</li>
+<li><strong>Collaboration</strong>: shared datasets across institutions &amp; regions<br>
+</li>
+<li><strong>Continuity</strong>: long program lifespans require robust preservation<br>
+</li>
+<li><strong>Accountability</strong>: funder compliance + community expectations<br>
+</li>
+<li><strong>Opportunities</strong>: well-managed data fosters reuse, integration, and new insights</li>
+</ul>
+</section>
+<section id="tri-agency-rdm-policy-2021" class="slide level2">
+<h2>Tri-Agency RDM Policy (2021)</h2>
+<ul>
+<li><strong>Applies across NSERC, SSHRC, CIHR</strong><br>
+</li>
+<li>Institutions must develop and publish <strong>institutional RDM strategies</strong><br>
+</li>
+<li>Researchers are expected to:
+<ul>
+<li>Prepare and maintain <strong>Data Management Plans</strong><br>
+</li>
+<li>Deposit data in <strong>trusted repositories</strong> when appropriate<br>
+</li>
+</ul></li>
+<li>Ensures Canadian research aligns with <strong>international open science practices</strong><br>
+</li>
+<li>Compliance increasingly linked to <strong>funding requirements</strong></li>
+</ul>
+<div class="footer">
+<p><a href="https://science.gc.ca/site/science/en/interagency-research-funding/policies-and-guidelines/research-data-management/tri-agency-research-data-management-policy-frequently-asked-questions">Tri-Agency RDM Policy</a></p>
+</div>
+</section>
+<section id="arcticnets-policy-2025" class="slide level2">
+<h2>ArcticNet’s Policy (2025)</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>More details available in the <em>How to Guide</em></strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<p><strong>Objectives</strong>:</p>
+<ul>
+<li>Apply best practices in data stewardship (national &amp; international standards)<br>
+</li>
+<li>Maximize value through accessibility, reuse, and transparency</li>
+<li>Encourage collaboration and responsible data sharing</li>
+<li>Provide guidance for sensitive data</li>
+<li>Respect Indigenous data sovereignty</li>
+</ul>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf">ArcticNet Data Management Policy (2025)</a></p>
+</div>
+<p><img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;"></p>
+</section>
+<section id="key-takeaways-1" class="slide level2">
+<h2>Key takeaways</h2>
+<ul>
+<li>RDM = <strong>active management of research data</strong> across its lifecycle<br>
+</li>
+<li>Benefits are real: <strong>visibility, efficiency, compliance, and collaboration</strong><br>
+</li>
+<li>IRPs face special challenges: <strong>scale, heterogeneity, collaboration, continuity</strong><br>
+</li>
+<li>Policies matter: <strong>Tri-Agency RDM Policy</strong> (national) and <strong>ArcticNet ADMP</strong> (network) set the expectations</li>
+</ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="when-who" class="title-slide slide level1 center">
+<h1><em>When &amp; Who</em></h1>
+<p>Timeline, Roles &amp; Responsibilities</p>
+<p>10 min</p>
+</section>
+<section id="why-timing-matters-in-irps" class="slide level2">
+<h2>Why timing matters in IRPs</h2>
+<ul>
+<li>IRPs = distributed ecosystems ➡️ diverse goals, methods, and data practices<br>
+</li>
+<li>Effective RDM must start early and continue throughout the program<br>
+</li>
+<li>Early planning unlocks future reuse &amp; collaboration</li>
+<li>Data as an infrastructure for collaboration</li>
+</ul>
+</section>
+<section id="timeline-and-dual-responsibilities" class="slide level2">
+<h2>Timeline and dual responsibilities</h2>
+<p><em>Network: balance autonomy &amp; coordination</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Standards &amp; templates</li>
+<li>Tools for metadata &amp; discovery</li>
+<li>Review, feedback &amp; training</li>
+<li>Synthesize &amp; report</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><a href="img/timeline2.png"><img data-src="img/timeline.png" style="width:100.0%"></a></p>
+</div></div>
+</section>
+<section id="timeline-and-dual-responsibilities-1" class="slide level2">
+<h2>Timeline and dual responsibilities</h2>
+<p><em>Researchers: manage and document project data responsibly</em></p>
+<div class="columns">
+<div class="column" style="width:40%;">
+<ul>
+<li>Proposal &amp; tentative data management plan</li>
+<li>Develop and maintain project-level data management plan</li>
+<li>Collect &amp; document</li>
+<li>Analyze</li>
+<li>Archive</li>
+</ul>
+</div><div class="column" style="width:60%;">
+<p><a href="img/timeline2.png"><img data-src="img/timeline2.png" style="width:100.0%"></a></p>
+</div></div>
+</section>
+<section id="benefits-of-shared-responsibility" class="slide level2">
+<h2>Benefits of shared responsibility</h2>
+<ul>
+<li><strong>For Researchers</strong>
+<ul>
+<li>Reduced administrative burden (network reviews, templates, tools)<br>
+</li>
+<li>Increased visibility and citations for datasets<br>
+</li>
+<li>Easier compliance with funder requirements<br>
+</li>
+<li>Improved data reuse and discovery<br>
+</li>
+<li>Unexpected collaborations &amp; new insights</li>
+</ul></li>
+</ul>
+</section>
+<section id="benefits-of-shared-responsibility-1" class="slide level2">
+<h2>Benefits of shared responsibility</h2>
+<ul>
+<li><strong>For Researchers</strong>
+<ul>
+<li>Reduced administrative burden (network reviews, templates, tools)<br>
+</li>
+<li>Increased visibility and citations for datasets<br>
+</li>
+<li>Easier compliance with funder requirements<br>
+</li>
+<li>Improved data reuse and discovery<br>
+</li>
+<li>Unexpected collaborations &amp; new insights</li>
+</ul></li>
+<li><strong>For the Network &amp; IRP</strong>
+<ul>
+<li>Better integration of diverse datasets<br>
+</li>
+<li>Ability to track collaboration &amp; impact<br>
+</li>
+<li>Stronger collective legacy beyond the program<br>
+</li>
+<li>Data infrastructure that supports future research</li>
+</ul></li>
+</ul>
+</section>
+<section id="key-takeaways-2" class="slide level2">
+<h2>Key takeaways</h2>
+<ul>
+<li>Researcher responsibilities are central but part of a bigger system</li>
+<li>Timing matters: plan early, update often, archive at the end<br>
+</li>
+<li>Network-level support transforms isolated datasets into drivers of collaboration</li>
+<li>By speaking a common metadata language, IRPs ensure outputs remain visible, connected, and reusable</li>
+</ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="how-to-guide" class="title-slide slide level1 center">
+<h1><em>How to Guide</em></h1>
+<p>Building your Data Management Plan</p>
+<p>45 min</p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section>
+<section id="what-is-a-dmp" class="slide level2">
+<h2>What is a DMP?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>DMP: Data Management Plan</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<blockquote>
+<p>A Data Management Plan (DMP) is a formal document, typically 1-2 pages long, that outlines how data will be handled during and after a project.</p>
+</blockquote>
+<div class="footer">
+<p><a href="https://www.youtube.com/watch?v=p_JzQxxC4ts">McGill video capsule</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://datamanagement.hms.harvard.edu/plan-design/data-management-plans">Harvard guide</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://dmp-pgd.ca/public_templates">DMP Assistant templates</a></p>
+</div>
+</section>
+<section id="what-is-a-dmp-1" class="slide level2">
+<h2>What is a DMP?</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>DMP: Data Management Plan</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<p><strong><em>Benefits:</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li class="fragment">Required by many funders, including Tri-Agency and ArcticNet.<br>
+</li>
+<li class="fragment">Ensures feasibility of research proposals<br>
+</li>
+<li class="fragment">Demonstrates responsible stewardship of public funds<br>
+</li>
+<li class="fragment">Sets expectations for storage, sharing, and preservation<br>
+</li>
+<li class="fragment">Foundation for good collaboration and reuse</li>
+<li class="fragment">Easier compliance with certain journals</li>
+<li class="fragment">Improved visibility and citations for datasets<br>
+</li>
+</ul>
+</div>
+<div class="footer">
+<p><a href="https://www.youtube.com/watch?v=p_JzQxxC4ts">McGill video capsule</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://datamanagement.hms.harvard.edu/plan-design/data-management-plans">Harvard guide</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://dmp-pgd.ca/public_templates">DMP Assistant templates</a></p>
+</div>
+</section>
+<section id="why-dmps-matter-in-irps" class="slide level2">
+<h2>Why DMPs matter in IRPs</h2>
+<ul>
+<li>IRPs = <strong>distributed ecosystems</strong> ➡️ diverse goals, data, practices<br>
+</li>
+<li>Collective DMPs give <strong>visibility</strong> into expected outputs<br>
+</li>
+<li>Enable <strong>early coordination</strong> of standards and tools<br>
+</li>
+<li>Reveal <strong>overlaps, synergies, and cost-sharing opportunities</strong><br>
+</li>
+<li>Reduce duplication and improve program coherence</li>
+</ul>
+</section>
+<section id="arcticnet-principles" class="slide level2">
+<h2>ArcticNet Principles</h2>
+<p><strong><em>In other words: what is expected of you as a researcher</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li class="fragment">ArcticNet funded data = a <strong>public good</strong> ➡️ as open as possible, as closed as necessary<br>
+</li>
+<li class="fragment">Researchers must ensure:
+<ul>
+<li class="fragment"><strong>Timely sharing</strong> ➡️ data made publicly available quickly, unless restricted</li>
+<li class="fragment"><strong>Publish metadata</strong> ➡️ publish and share your metadata (e.g.&nbsp;Polar Data Catalog)</li>
+<li class="fragment"><strong>Respect for Indigenous rights</strong> ➡️ uphold Inuit, First Nations, and Métis ownership, access, and control (CARE, OCAP®, NISR)<br>
+</li>
+<li class="fragment"><strong>Citable &amp; preserved</strong> ➡️ data should be publishable, citable, and preserved when appropriate<br>
+</li>
+<li class="fragment"><strong>Interoperability &amp; connectivity</strong> ➡️ link with Canadian &amp; international Arctic data systems, avoid duplication<br>
+</li>
+<li class="fragment"><strong>Best practices</strong> ➡️ follow ethical, legal, cultural, and funder requirements; use existing infrastructure where possible<br>
+</li>
+<li class="fragment"><strong>Support &amp; guidance</strong> ➡️ researchers engage with training, outreach, and resources provided<br>
+</li>
+</ul></li>
+</ul>
+</div>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf">ArcticNet Data Management Policy (2025)</a></p>
+</div>
+<p><img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;"></p>
+</section>
+<section id="key-sections-of-a-dmp" class="slide level2">
+<h2>Key sections of a DMP</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Answer these questions <strong>with substance</strong> and you will have a complete DMP:</strong></p>
+</div>
+<div class="callout-content">
+
+</div>
+</div>
+</div>
+<div style="font-size: 80%;">
+<ol type="1">
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Data collection</strong> ➡️ What data, formats, volume, protocols?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Documentation &amp; metadata</strong> ➡️ How will data be described? Which standards?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Storage &amp; protection</strong> ➡️ Where will working data live, and how is it protected?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Data Analysis</strong> ➡️ How will the data be analyzed?</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Preservation &amp; archiving</strong> ➡️ Which repository, which formats for long-term?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Sharing &amp; reuse</strong> ➡️ Who can access it, when, under what license?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Legal &amp; ethics</strong> ➡️ How are legal, privacy, consent, Indigenous data rights addressed?<br>
+</li>
+<li class="fragment"><i class="fa-regular fa-circle"></i> <strong>Roles &amp; resources</strong> ➡️ Who is responsible and what infrastructure is needed?<br>
+</li>
+</ol>
+</div>
+</section>
+<section id="tools-and-templates" class="slide level2">
+<h2>Tools and templates</h2>
+<ul>
+<li>Use available tools if possible
+<ul>
+<li><a href="https://dmp-pgd.ca/">DMP Assistant</a> (Canada’s online tool)<br>
+</li>
+<li><a href="https://dmptool.org/">DMP Tool</a></li>
+</ul></li>
+<li>Network may provide a <strong>template</strong> tailored to your program<br>
+</li>
+<li>Examples and guidance available from:
+<ul>
+<li><a href="https://datamanagement.hms.harvard.edu/plan-design/data-management-plans">Harvard DMP resources</a><br>
+</li>
+<li><a href="https://www.youtube.com/watch?v=p_JzQxxC4ts">McGill videos</a></li>
+</ul></li>
+</ul>
+</section>
+<section id="good-practices" class="slide level2">
+<h2>Good practices</h2>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Tips to DMP by</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><strong>Start early</strong> ➡️ draft DMP in the proposal stage<br>
+</li>
+<li class="fragment">Treat it as a <strong>living document</strong> ➡️ update as project evolves<br>
+</li>
+<li class="fragment">Reuse existing metadata forms / standards where possible (more on this later)</li>
+<li class="fragment">Keep it concise but <strong>actionable</strong><br>
+</li>
+<li class="fragment">Align with <strong>FAIR, CARE &amp; TRUST</strong> principles</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="fair-principles" class="slide level2">
+<h2><a href="https://www.nature.com/articles/sdata201618">FAIR</a> Principles</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="font-size: 80%;">
+<ul>
+<li><code>(F)</code> Findable</li>
+<li><code>(A)</code> Accessible</li>
+<li><code>(I)</code> Interoperable</li>
+<li><code>(R)</code> Reusable</li>
+</ul>
+<p><strong>Goals:</strong></p>
+<ul>
+<li>Make data easy to discover through rich metadata<br>
+</li>
+<li>Ensure data can be accessed under clear conditions<br>
+</li>
+<li>Promote interoperability across disciplines &amp; tools<br>
+</li>
+<li>Enable reuse through licenses &amp; clear documentation</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<p><a href="img/fair.png"><img data-src="img/fair.png"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://www.nature.com/articles/sdata201618">Wilkinson <em>et al.</em> 2016. <em>The FAIR Guiding Principles for scientific data management and stewardship</em></a></p>
+</div>
+</section>
+<section id="care-principles" class="slide level2">
+<h2><a href="https://datascience.codata.org/articles/10.5334/dsj-2020-043/">CARE</a> Principles</h2>
+<div class="columns">
+<div class="column" style="width:60%;">
+<div style="font-size: 80%;">
+<ul>
+<li><code>(C)</code> Collective Benefit</li>
+<li><code>(A)</code> Autority to Control</li>
+<li><code>(R)</code> Responsibility</li>
+<li><code>(E)</code> Ethics</li>
+</ul>
+<p><strong>Goals:</strong></p>
+<ul>
+<li>People- and purpose-oriented</li>
+<li>First Nations data rights and governance</li>
+<li>Inspired from <a href="https://fnigc.ca/ocap-training/">OCAP®</a></li>
+<li>Complement FAIR Principles</li>
+</ul>
+</div>
+</div><div class="column" style="width:40%;">
+<p><a href="img/care.png"><img data-src="img/care.png"></a></p>
+</div></div>
+<div class="footer">
+<p><a href="https://datascience.codata.org/articles/10.5334/dsj-2020-043/">Russo Carroll <em>et al.</em> 2020. <em>The CARE Principles for Indigenous Data Governance</em></a></p>
+</div>
+</section>
+<section id="trust-principles" class="slide level2">
+<h2><a href="https://datascience.codata.org/articles/10.5334/dsj-2020-043/">TRUST</a> Principles</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div style="font-size: 80%;">
+<ul>
+<li><code>(T)</code> Transparency</li>
+<li><code>(R)</code> Responsibility</li>
+<li><code>(U)</code> User Focus</li>
+<li><code>(S)</code> Sustainability</li>
+<li><code>(T)</code> Technology</li>
+</ul>
+</div>
+</div><div class="column" style="width:50%;">
+<p><a href="img/trust.png"><img data-src="img/trust.png"></a></p>
+</div></div>
+<div style="font-size: 80%;">
+<p><strong>Goals:</strong></p>
+<ul>
+<li>Build confidence in digital repositories<br>
+</li>
+<li>Ensure authenticity, integrity, and reliability of data<br>
+</li>
+<li>Prioritize the needs of user communities<br>
+</li>
+<li>Guarantee long-term preservation and accessibility<br>
+</li>
+<li>Provide secure, persistent, and interoperable infrastructure<br>
+</li>
+</ul>
+</div>
+<div class="footer">
+<p><a href="https://www.nature.com/articles/s41597-020-0486-7">Lin <em>et al.</em> 2020. <em>The TRUST Principles for digital repositories</em> Scientific data</a></p>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="practical-guide" class="title-slide slide level1 center">
+<h1>Practical Guide</h1>
+
+</section>
+<section id="dmp-checklist" class="slide level2">
+<h2>DMP Checklist</h2>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Goal</strong></p>
+</div>
+<div class="callout-content">
+<ul>
+<li class="fragment"><em>Equip researchers with concrete steps to manage data responsibly, efficiently, and in line with network &amp; funder expectations.</em></li>
+<li class="fragment"><em>At the end, you should know what steps to undertake to prepare and update an adequate Data Management Plan</em></li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="dmp-checklist-1" class="slide level2">
+<h2>DMP Checklist</h2>
+<div style="font-size: 90%;">
+<p><i class="fa-regular fa-circle"></i> <em>Data collection</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Documentation &amp; metadata</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Storage &amp; protection</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Data Analysis</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Preservation &amp; archiving</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Sharing &amp; reuse</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Legal &amp; ethics</em></p>
+<p><i class="fa-regular fa-circle"></i> <em>Roles &amp; resources</em></p>
+</div>
+<!--
+![](img/DMP.png){width=20%} 
+![](img/collection.png){width=20%}
+![](img/archiving.png){width=20%} 
+-->
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="data-collection" class="title-slide slide level1 center">
+<h1>Data collection</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/collection.png"></p>
+</div>
+</section>
+<section id="data-collection-1" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>Guiding Questions</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li>What kinds of data will I collect?<br>
+</li>
+<li>In which formats? Open or proprietary?<br>
+</li>
+<li>How much data do I expect to generate?<br>
+</li>
+<li>Which instruments, sensors, or methods will I use?<br>
+</li>
+<li>How will I ensure quality control before, during, and after collection?<br>
+</li>
+<li>How will I organize and label files?<br>
+</li>
+</ul>
+</div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="data-collection-2" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>Core Elements</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li><strong>Types of data</strong> ➡️ observational, experimental, computational, derived<br>
+</li>
+<li><strong>Formats &amp; standards</strong> ➡️ e.g., CSV, NetCDF, TIFF, Darwin Core, ISO 19115<br>
+</li>
+<li><strong>Volume &amp; scale</strong> ➡️ estimated GB/TB, number of samples/records<br>
+</li>
+<li><strong>Collection methods &amp; instruments</strong> ➡️ field protocols, sensors, lab assays, software pipelines<br>
+</li>
+<li><strong>Quality assurance / quality control</strong> ➡️ calibration, duplicate samples, error-checking<br>
+</li>
+<li><strong>Organization &amp; naming</strong> ➡️ consistent file/folder naming, controlled vocabularies<br>
+</li>
+<li><strong>Documentation</strong> ➡️ field sheets, lab notebooks, e-logs, linking samples to metadata<br>
+</li>
+</ul>
+</div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="data-collection-3" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>Some notes on file formats</em></strong></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Avoid Proprietary &amp; Unsuitable Formats</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Not all formats are sustainable for long-term research data. Avoid using:<br>
+</li>
+<li>Proprietary formats: require specific software that may become unavailable (ex. .xlsx, .shp, .sav, .psd, .docx with macros)</li>
+<li>Formats with strong version-dependence: older/newer versions may be unreadable without exact software (ex. ArcGIS-only file types)<br>
+</li>
+<li>Compressed / lossy formats: reduce data quality and limit reuse (ex. .jpg, .mp3)<br>
+</li>
+<li>Encrypted or password-protected files: block discovery, reuse, and preservation workflows</li>
+</ul>
+<p><strong>Rule of thumb:</strong> if a file requires special software, or might lose information when saved, it’s not a good archival format.</p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Preferred Open Formats by Data Type</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 100%;">
+<ul>
+<li><p>Tabular data ➡️ CSV, Parquet</p></li>
+<li><p>Spatial data ➡️ GeoPackage, GeoTIFF, NetCDF<br>
+</p></li>
+<li><p>Images ➡️ TIFF (uncompressed), PNG<br>
+</p></li>
+<li><p>Audio / Video ➡️ WAV, MP4 (H.264 codec)<br>
+</p></li>
+<li><p>Text / Documents ➡️ TXT, PDF/A, XML, JSON<br>
+</p></li>
+<li><p>Metadata ➡️ XML, JSON, standardized schemas (e.g., ISO 19115, Darwin Core)</p></li>
+<li><p>Choose formats that are:</p>
+<ul>
+<li>Open &amp; non-proprietary<br>
+</li>
+<li>Well-documented &amp; widely supported<br>
+</li>
+<li>Sustainable for long-term preservation<br>
+</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="data-collection-4" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>What are data standards?</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li>Define how data is structured and formatted</li>
+<li>Ensure datasets are consistent and interoperable across projects<br>
+</li>
+<li>Often discipline-specific ➡️ adopt community norms<br>
+</li>
+<li>Examples:
+<ul>
+<li><strong>Darwin Core</strong> ➡️ biodiversity occurrence records<br>
+</li>
+<li><strong>NetCDF</strong> ➡️ climate &amp; oceanographic data<br>
+</li>
+<li><strong>FASTQ</strong> ➡️ DNA sequencing reads<br>
+</li>
+</ul></li>
+</ul>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Data standards vs Metadata standards</strong></p>
+</div>
+<div class="callout-content">
+<p>Data standards are closely related to metadata standards, but they serve different purposes.</p>
+<p>See next section for Metadata standards.</p>
+</div>
+</div>
+</div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="footer">
+<p><a href="https://fairsharing.org/">FAIRsharing.org</a></p>
+</div>
+</section>
+<section id="data-collection-5" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>Quality Assurance / Quality Control (QA/QC)</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li><strong>Before collection</strong> ➡️ instrument calibration, standardized protocols<br>
+</li>
+<li><strong>During collection</strong> ➡️ duplicate/triplicate samples, control samples, field blanks<br>
+</li>
+<li><strong>After collection</strong> ➡️ validation checks, error detection, version tracking<br>
+</li>
+</ul>
+</div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="data-collection-6" class="slide level2">
+<h2>Data collection</h2>
+<p><strong><em>Organization &amp; naming</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li>Use <strong>consistent, descriptive file &amp; folder names</strong><br>
+</li>
+<li>Avoid spaces/special characters ➡️ use <code>_</code> or <code>-</code></li>
+<li>Include <strong>versioning &amp; dates</strong> (e.g., <code>projectA_samples_2025-03-01_v1.csv</code>)<br>
+</li>
+<li>Organize folders by project/study/site/date rather than by researcher’s preference<br>
+</li>
+<li>Use <strong>controlled vocabularies / ontologies</strong> where available ➡️ interoperability</li>
+</ul>
+</div>
+<p><br></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Do &amp; Don’t</strong></p>
+</div>
+<div class="callout-content">
+<p>✅ <code>lakeC_fieldnotes_2025-03-01_v2.csv</code><br>
+❌ <code>data latest &amp; updated.xlsx</code></p>
+</div>
+</div>
+</div>
+<div class="footer">
+<p><a href="https://data.research.cornell.edu/data-management/storing-and-managing/file-management/">Cornell RDM: File Organization</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://guides.library.stanford.edu/data-best-practices">Stanford Libraries: File Naming</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://fairsharing.org/">FAIRsharing</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="http://obofoundry.org/">OBO Foundry</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.tdwg.org/">TDWG</a></p>
+</div>
+<p><img src="img/collection.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="documentation-metadata" class="title-slide slide level1 center">
+<h1>Documentation &amp; metadata</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/metadata.png"></p>
+</div>
+</section>
+<section id="documentation-metadata-1" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><strong><em>Guiding Questions</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li>How will I document my data so that others (or my future self) can understand it?<br>
+</li>
+<li>Which metadata standard(s) will I use?<br>
+</li>
+<li>Where and how will metadata be created and stored?<br>
+</li>
+<li>When will metadata be created and updated?<br>
+</li>
+<li>How will I ensure metadata uses controlled vocabularies and persistent IDs?<br>
+</li>
+</ul>
+</div>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="documentation-metadata-2" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><strong><em>Core Elements</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li><strong>Documentation practices</strong> ➡️ lab/field notebooks, data dictionaries, README files, protocols<br>
+</li>
+<li><strong>Metadata standards</strong> ➡️ Dublin Core, ISO 19115, Darwin Core, DataCite Schema<br>
+</li>
+<li><strong>Tools &amp; platforms</strong> ➡️ Polar Data Catalogue, FRDR, ISA tools<br>
+</li>
+<li><strong>Timing</strong> ➡️ start at project onset, update regularly, finalize at archiving<br>
+</li>
+<li><strong>Interoperability</strong> ➡️ controlled vocabularies, ontologies, persistent identifiers (DOI, ORCID, ROR)<br>
+</li>
+</ul>
+</div>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="documentation-metadata-3" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><strong><em>What are metadata &amp; metadata standards?</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li>Define how datasets are described (the context, not the content)<br>
+</li>
+<li>Ensure data are findable, interpretable, and reusable<br>
+</li>
+<li>Provide consistent fields for <em>who, what, where, when, how</em></li>
+<li>Examples:
+<ul>
+<li><strong>Dublin Core</strong> ➡️ general-purpose descriptors<br>
+</li>
+<li><strong>ISO 19115</strong> ➡️ geospatial metadata<br>
+</li>
+<li><strong>Darwin Core</strong> ➡️ biodiversity metadata<br>
+</li>
+<li><strong>DataCite Schema</strong> ➡️ dataset metadata for DOIs<br>
+</li>
+</ul></li>
+</ul>
+</div>
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Metadata standards vs Data standards</strong></p>
+</div>
+<div class="callout-content">
+<p>Metadata standards describe the data itself (context &amp; discovery), while data standards define how the data is structured. Together, they ensure interoperability and reuse.</p>
+</div>
+</div>
+</div>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="footer">
+<p><a href="https://fairsharing.org/">FAIRsharing.org</a></p>
+</div>
+</section>
+<section id="documentation-metadata-4" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Dublin Core: What is it?</em></strong></p>
+<ul>
+<li>A <strong>generic metadata standard</strong> used across disciplines<br>
+</li>
+<li>Provides a <strong>basic set of 15 elements</strong> to describe digital objects<br>
+</li>
+<li>Focused on: <strong>who, what, where, when</strong><br>
+</li>
+<li>Works across repositories, making datasets <strong>findable and shareable</strong></li>
+</ul>
+<p><strong>Core elements (examples):</strong><br>
+- <code>title</code>, <code>creator</code>, <code>subject</code>, <code>date</code>, <code>format</code>, <code>identifier</code></p>
+<p>💡 Often extended with qualifiers to add more precision</p>
+</section>
+<section id="documentation-metadata-5" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Dublin Core: The Grammar</em></strong></p>
+<ul>
+<li>Based on <strong>element–value pairs</strong>
+<ul>
+<li>Element = the property being described<br>
+</li>
+<li>Value = the information recorded<br>
+</li>
+</ul></li>
+<li>Syntax is <strong>machine-readable</strong> (XML, JSON) but also <strong>human-readable</strong><br>
+</li>
+<li>Flexible: can be embedded in repositories, DOIs, web pages</li>
+</ul>
+<p><strong>Example pattern:</strong><br>
+- <code>dc:title</code> ➡️ “ArcticNet Water Sampling Data 2025”<br>
+- <code>dc:creator</code> ➡️ “Smith, J.”<br>
+- <code>dc:date</code> ➡️ “2025-04-15”</p>
+</section>
+<section id="documentation-metadata-6" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Dublin Core: Example Record</em></strong></p>
+<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
+<span id="cb1-2"><a href=""></a>  &lt;<span class="kw">dc:title</span>&gt;ArcticNet Water Sampling Data 2025&lt;/<span class="kw">dc:title</span>&gt;</span>
+<span id="cb1-3"><a href=""></a>  &lt;<span class="kw">dc:creator</span>&gt;Smith, J.&lt;/<span class="kw">dc:creator</span>&gt;</span>
+<span id="cb1-4"><a href=""></a>  &lt;<span class="kw">dc:subject</span>&gt;Oceanography&lt;/<span class="kw">dc:subject</span>&gt;</span>
+<span id="cb1-5"><a href=""></a>  &lt;<span class="kw">dc:date</span>&gt;2025-04-15&lt;/<span class="kw">dc:date</span>&gt;</span>
+<span id="cb1-6"><a href=""></a>  &lt;<span class="kw">dc:format</span>&gt;CSV&lt;/<span class="kw">dc:format</span>&gt;</span>
+<span id="cb1-7"><a href=""></a>  &lt;<span class="kw">dc:identifier</span>&gt;doi:10.12345/abcd&lt;/<span class="kw">dc:identifier</span>&gt;</span>
+<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+</section>
+<section id="documentation-metadata-7" class="slide level2">
+<h2>Documentation &amp; metadata</h2>
+<p><img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s requirements</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Starting year 2, researchers must provide links to metadata records in recognized repositories<br>
+</li>
+<li>Metadata must be openly accessible</li>
+<li>Funding will be withheld if metadata records are missing or inaccessible<br>
+</li>
+<li>For Indigenous-owned data ➡️ researchers must identify the organization responsible for storing and managing it
+<ul>
+<li>Metadata publication is still required</li>
+</ul></li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s commitment</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<p><strong><em>Role:</em></strong></p>
+<ul>
+<li>Define metadata standards for projects<br>
+</li>
+<li>Support researchers in preparing metadata<br>
+</li>
+<li>Provide tools/templates to ease metadata submission</li>
+</ul>
+<p><strong><em>Initiatives</em></strong></p>
+<ul>
+<li>Working with Polar Data Catalogue (PDC) to host project metadata<br>
+</li>
+<li>Providing a PDC metadata template</li>
+<li>Offering support for preparation and submission</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf">ArcticNet Data Management Policy (2025)</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://datascience.codata.org/articles/10.5334/dsj-2025-002">Pacharra <em>et al.</em> 2025. From Bench to Brain: A Metadata-driven Approach to Research Data Management in a Collaborative Neuroscientific Research Center.</a></p>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="storage-protection" class="title-slide slide level1 center">
+<h1>Storage &amp; protection</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/storage.png"></p>
+</div>
+</section>
+<section id="storage-protection-1" class="slide level2">
+<h2>Storage &amp; protection</h2>
+<p><img src="img/storage.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding Questions</em></strong></p>
+<ul>
+<li>Where will data be stored during the project?<br>
+</li>
+<li>How will it be protected (backups, encryption, access controls)?<br>
+</li>
+<li>Who is responsible for managing storage &amp; protection?<br>
+</li>
+<li>How long must the data be kept?</li>
+</ul>
+<p><em>These answers ensure your DMP covers both security and reliability.</em></p>
+</section>
+<section id="storage-protection-2" class="slide level2">
+<h2>Storage &amp; protection</h2>
+<p><img src="img/storage.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core Elements</em></strong></p>
+<ul>
+<li><strong>Storage location</strong> ➡️ institutional servers, certified cloud storage, external media<br>
+</li>
+<li><strong>Backup strategy</strong> ➡️ frequency, number of copies, locations (3-2-1 rule)<br>
+</li>
+<li><strong>Access &amp; security</strong> ➡️ permissions, authentication, encryption<br>
+</li>
+<li><strong>File integrity</strong> ➡️ checksums, error detection<br>
+</li>
+<li><strong>Scalability</strong> ➡️ projected storage needs (GB/TB)<br>
+</li>
+<li><strong>Costs &amp; resources</strong> ➡️ who pays and what infrastructure is provided</li>
+</ul>
+</section>
+<section id="storage-protection-3" class="slide level2">
+<h2>Storage &amp; protection</h2>
+<p><img src="img/storage.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Prefer institutional or certified storage over personal laptops/USBs<br>
+</li>
+<li>Use encrypted storage for sensitive data<br>
+</li>
+<li>Automate backups whenever possible<br>
+</li>
+<li>Document storage practices clearly in the DMP<br>
+</li>
+<li>Plan ahead for long-term preservation (more on this soon)<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Special Considerations</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Sensitive / Indigenous data ➡️ use community-approved safeguards, respect sovereignty<br>
+</li>
+<li>Large volumes / “big data” ➡️ address infrastructure, costs, specialized servers<br>
+</li>
+<li>Fieldwork constraints ➡️ describe temporary solutions (field laptops, portable drives) and how data will be secured until upload<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="data-analysis" class="title-slide slide level1 center">
+<h1>Data analysis</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/analysis.png"></p>
+</div>
+</section>
+<section id="data-analysis-1" class="slide level2">
+<h2>Data analysis</h2>
+<p><img src="img/analysis.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding questions</em></strong></p>
+<ul>
+<li>What software, tools, or pipelines will be used?<br>
+</li>
+<li>How will analysis steps be documented?<br>
+</li>
+<li>How will you ensure reproducibility?</li>
+</ul>
+<p><em>Short but important: show how your analysis is transparent and trustworthy.</em></p>
+</section>
+<section id="data-analysis-2" class="slide level2">
+<h2>Data analysis</h2>
+<p><img src="img/analysis.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core elements</em></strong></p>
+<ul>
+<li><strong>Software &amp; tools</strong> ➡️ R, Python, MATLAB, ArcGIS, QGIS (note open vs proprietary)<br>
+</li>
+<li><strong>Workflow documentation</strong> ➡️ scripts, Jupyter notebooks, R Markdown, Quarto<br>
+</li>
+<li><strong>Reproducibility</strong> ➡️ version control (GitHub, GitLab), containers (Docker)<br>
+</li>
+<li><strong>Data transformations</strong> ➡️ raw vs processed datasets, cleaning methods, derived outputs</li>
+</ul>
+</section>
+<section id="data-analysis-3" class="slide level2">
+<h2>Data analysis</h2>
+<p><img src="img/analysis.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Prefer open-source tools when feasible<br>
+</li>
+<li>Share analysis scripts with your datasets<br>
+</li>
+<li>Keep raw and processed data separate</li>
+<li>Document assumptions, parameters, and software versions</li>
+</ul>
+<p><em>Builds trust, efficiency, and long-term usability of results</em></p>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>A note on reproducibility</strong></p>
+</div>
+<div class="callout-content">
+<p><a href="img/reproducibility.png"><img data-src="img/reproducibility.png" style="width:80.0%"></a></p>
+</div>
+</div>
+</div>
+</div></div>
+<div class="footer">
+<p><a href="https://insileco.io/workshop_reproducibility/">inSileco workshop on reproducibility</a></p>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="preservation-archiving" class="title-slide slide level1 center">
+<h1>Preservation &amp; archiving</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/archiving.png"></p>
+</div>
+</section>
+<section id="preservation-archiving-1" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding Questions</em></strong></p>
+<ul>
+<li>Where will data be deposited for long-term preservation?<br>
+</li>
+<li>Which repository/platforms (institutional, national, disciplinary)?<br>
+</li>
+<li>How will datasets be cited and versioned?<br>
+</li>
+<li>What is the expected retention period?<br>
+</li>
+<li>How will sensitive/Indigenous data be preserved responsibly?</li>
+</ul>
+<p><em>Goal: ensure your data remain usable and accessible well beyond the project</em></p>
+</section>
+<section id="preservation-archiving-2" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li><strong>Trusted repositories</strong> ➡️ Polar Data Catalogue, FRDR, Nordicana-D, Dryad, Zenodo, GBIF, OBIS<br>
+</li>
+<li><strong>Preservation formats</strong> ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)<br>
+</li>
+<li><strong>Metadata</strong> ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core)</li>
+<li><strong>Licensing</strong> ➡️ CC-BY, CC0, or custom terms<br>
+</li>
+<li><strong>Persistent identifiers</strong> ➡️ DOIs, ARKs for datasets<br>
+</li>
+<li><strong>Retention period</strong> ➡️ typically ≥ 5–10 years, ideally indefinite</li>
+</ul>
+</section>
+<section id="preservation-archiving-3" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Deposit data at publication time, not years later<br>
+</li>
+<li>Archive raw and processed data, link to analysis scripts<br>
+</li>
+<li>Use repository versioning features instead of manual file names<br>
+</li>
+<li>Assign clear licenses and access conditions (open, embargoed, restricted)<br>
+</li>
+<li>Ensure alignment with FAIR &amp; CARE principles</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Special Considerations</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Sensitive data ➡️ anonymization, restricted access, secure long-term storage<br>
+</li>
+<li>Indigenous data sovereignty ➡️ respect CARE, OCAP®, NISR, community protocols<br>
+</li>
+<li>Large volumes ➡️ consider specialized repositories, HPC, or cloud archives<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="preservation-archiving-4" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Persistent Identifiers (PIDs)</em></strong></p>
+<div style="font-size: 80%;">
+<ul>
+<li><p>What they are: unique, permanent digital references for research objects, people, and institutions.</p></li>
+<li><p>Examples:</p>
+<ul>
+<li><strong>DOI</strong> ➡️ datasets, publications<br>
+</li>
+<li><strong>ORCID</strong> ➡️ researchers<br>
+</li>
+<li><strong>ROR</strong> ➡️ institutions<br>
+</li>
+<li><strong>ARK / Handle</strong> ➡️ digital objects</li>
+</ul></li>
+<li><p>Why important in DMPs &amp; RDM?</p>
+<ul>
+<li>Ensure long-term findability and access<br>
+</li>
+<li>Enable unambiguous attribution (linking people, projects, data)<br>
+</li>
+<li>Facilitate interoperability across repositories and systems<br>
+</li>
+<li>Support impact tracking and reuse metrics</li>
+</ul></li>
+</ul>
+<p><em>Think of PIDs as the “barcodes” of research</em></p>
+</div>
+</section>
+<section id="preservation-archiving-5" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Data repositories</em></strong></p>
+<ul>
+<li>Institutional ➡️ university libraries, research data services<br>
+</li>
+<li>National ➡️ Federated Research Data Repository (FRDR), Nordicana-D<br>
+</li>
+<li>Disciplinary ➡️ Polar Data Catalogue, GBIF, OBIS, GenBank, ICPSR<br>
+</li>
+<li>General-purpose ➡️ Zenodo, Dryad, Figshare, Dataverse</li>
+</ul>
+<p><strong><em>Choose a repository that is:</em></strong></p>
+<ul>
+<li>Trusted (certified, long-term sustainability)<br>
+</li>
+<li>FAIR-aligned (metadata standards, PIDs)<br>
+</li>
+<li>Appropriate for your data type &amp; community</li>
+</ul>
+<div class="footer">
+<p><a href="https://www.re3data.org/">Repository Finder (re3data.org)</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.frdr-dfdr.ca/">FRDR</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://fairsharing.org/">FAIRsharing.org</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://dataverse.org/">Dataverse</a></p>
+</div>
+</section>
+<section id="preservation-archiving-6" class="slide level2">
+<h2>Preservation &amp; archiving</h2>
+<p><img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s requirements</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>No centralized ArcticNet repository ➡️ projects choose suitable long-term repository<br>
+</li>
+<li>Prefer certified, open-access options (PDC, Nordicana-D, GBIF, OBIS, FRDR)<br>
+</li>
+<li>Deposit all data and metadata supporting results<br>
+</li>
+<li>Plan early, use non-proprietary formats (CSV, TIFF, NetCDF)<br>
+</li>
+<li>Retain data as long as required by stakeholders and funders<br>
+</li>
+<li>State in DMP what will be preserved and any restrictions<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s guidance</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Researchers decide the most appropriate repository for their discipline and data type<br>
+</li>
+<li>Focus on repository sustainability, DOIs, and open access<br>
+</li>
+<li>Preservation can include raw, processed, and derived data when valuable<br>
+</li>
+<li>Sensitive or Indigenous data may need restricted access or safeguards<br>
+</li>
+<li>Rationale for retention and preservation must be clear in the DMP<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf">ArcticNet Data Management Policy (2025)</a></p>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="sharing-reuse" class="title-slide slide level1 center">
+<h1>Sharing &amp; reuse</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/sharing.png"></p>
+</div>
+</section>
+<section id="sharing-reuse-1" class="slide level2">
+<h2>Sharing &amp; reuse</h2>
+<p><img src="img/sharing.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding Questions</em></strong></p>
+<ul>
+<li>Who can access the data, and when?<br>
+</li>
+<li>How will data be cited?<br>
+</li>
+<li>What license will govern reuse?<br>
+</li>
+<li>Are there ethical, legal, or cultural restrictions?</li>
+</ul>
+<p><em>Goal: make data available in a way that is clear, usable, and responsible</em></p>
+</section>
+<section id="sharing-reuse-2" class="slide level2">
+<h2>Sharing &amp; reuse</h2>
+<p><img src="img/sharing.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core Elements</em></strong></p>
+<ul>
+<li><strong>Access conditions</strong> ➡️ open, embargoed, or restricted<br>
+</li>
+<li><strong>Licensing</strong> ➡️ CC-BY, CC0, or custom terms<br>
+</li>
+<li><strong>Citation practices</strong> ➡️ DOIs or other PIDs, recommended citation text<br>
+</li>
+<li><strong>Documentation</strong> ➡️ metadata and README ensure others can reuse data</li>
+</ul>
+</section>
+<section id="sharing-reuse-3" class="slide level2">
+<h2>Sharing &amp; reuse</h2>
+<p><img src="img/sharing.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Licensing Your Data</em></strong></p>
+<ul>
+<li>A license tells others how they can use your data</li>
+<li>Common choices:
+<ul>
+<li><strong>CC-BY</strong> ➡️ use with attribution<br>
+</li>
+<li><strong>CC0</strong> ➡️ no restrictions (public domain)<br>
+</li>
+<li><strong>Custom agreements</strong> ➡️ for sensitive, Indigenous, or commercial data</li>
+</ul></li>
+</ul>
+<p><em>Clearly state the license in your metadata, README, or repository record</em></p>
+<div class="footer">
+<p><a href="https://creativecommons.org/licenses/">Creative Commons Licenses</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://dmeg.cessda.eu/Data-Management-Expert-Guide/6.-Archive-Publish/Publishing-with-CESSDA-archives/Licensing-your-data">Data Management Expert Guide - Licensing your data</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://www.howtofair.dk/how-to-fair/data-licences">How to FAIR - Data licences</a> &nbsp; <strong><em>·</em></strong> &nbsp; <a href="https://choosealicense.com/licenses/">Choose a license</a></p>
+</div>
+<p><img src="img/sharing_reuse_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+</section>
+<section id="sharing-reuse-4" class="slide level2">
+<h2>Sharing &amp; reuse</h2>
+<p><img src="img/sharing.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Use repositories that support DOIs and licensing</li>
+<li>Publish data papers or cite dataset DOIs in articles<br>
+</li>
+<li>Link data to publications, code, and related datasets<br>
+</li>
+<li>Be transparent about conditions of reuse</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Special Considerations</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Sensitive or Indigenous data ➡️ respect CARE, OCAP®, and community protocols<br>
+</li>
+<li>Commercially sensitive data ➡️ embargoes or restricted access<br>
+</li>
+<li>Collaborations ➡️ phased sharing (internal first, open later)<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+</section>
+<section id="sharing-reuse-5" class="slide level2">
+<h2>Sharing &amp; reuse</h2>
+<p><img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-important callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s requirements</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Data must be findable, accessible, interoperable, and reusable (FAIR)<br>
+</li>
+<li>Metadata published early in a recognized catalogue (e.g., re3data, PDC, FRDR)<br>
+</li>
+<li>Deposit data in a trusted repository with persistent identifiers (DOIs)<br>
+</li>
+<li>Users must cite and acknowledge data creators<br>
+</li>
+<li>Any restrictions (sensitive, Indigenous, security) must be justified in the DMP<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-note callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>ArcticNet’s guidance</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Make data available as openly and quickly as possible, with minimal delay<br>
+</li>
+<li>“As open as possible, as closed as necessary” (ethical and legal considerations)<br>
+</li>
+<li>Indigenous and sensitive data require safeguards, informed consent, and respect for sovereignty (CARE, OCAP®, NISR)<br>
+</li>
+<li>Embargoes or restricted access may apply, but must be transparent and time-limited<br>
+</li>
+<li>Data access requests should not be unreasonably denied<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<div class="footer">
+<p><a href="https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf">ArcticNet Data Management Policy (2025)</a></p>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="legal-ethics" class="title-slide slide level1 center">
+<h1>Legal &amp; ethics</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/legal.png"></p>
+</div>
+</section>
+<section id="legal-ethics-1" class="slide level2">
+<h2>Legal &amp; ethics</h2>
+<p><img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding Questions</em></strong></p>
+<ul>
+<li>Does the project involve human participants or PII?<br>
+</li>
+<li>Will Indigenous knowledge or data be collected?<br>
+</li>
+<li>Are ethics approvals required (REB/IRB, community review)?<br>
+</li>
+<li>Who owns the data and how will IP be handled?<br>
+</li>
+<li>Are there risks to safety, security, or sensitive ecosystems?</li>
+</ul>
+</section>
+<section id="legal-ethics-2" class="slide level2">
+<h2>Legal &amp; ethics</h2>
+<p><img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core Elements</em></strong></p>
+<ul>
+<li>Ethics approvals (REB/IRB numbers, consent procedures)<br>
+</li>
+<li>Indigenous data sovereignty (CARE, OCAP®, NISR, community agreements)<br>
+</li>
+<li>Sensitive data management (anonymization, restricted access, embargoes)<br>
+</li>
+<li>Intellectual property (ownership, licensing, industry agreements)<br>
+</li>
+<li>Legal compliance (Tri-Council, privacy acts, international obligations)</li>
+</ul>
+</section>
+<section id="legal-ethics-3" class="slide level2">
+<h2>Legal &amp; ethics</h2>
+<p><img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Clearly explain how participant rights are protected<br>
+</li>
+<li>Use written data sharing agreements when applicable<br>
+</li>
+<li>Consult community-led governance for Indigenous research<br>
+</li>
+<li>Be transparent about data that cannot be shared and why<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div><div class="column" style="width:50%;">
+<div class="callout callout-warning callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Special Considerations</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Multiple institutions ➡️ align ethics and legal requirements<br>
+</li>
+<li>Indigenous partners may require community-based repositories or controlled access<br>
+</li>
+<li>ArcticNet requires reporting of security breaches within 24 hours</li>
+<li>Consider cross-border data transfer and compliance<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+</div></div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="roles-resources" class="title-slide slide level1 center">
+<h1>Roles &amp; resources</h1>
+<div style="width:20%; margin: 0 auto;">
+<p><img src="img/roles.png"></p>
+</div>
+</section>
+<section id="roles-resources-1" class="slide level2">
+<h2>Roles &amp; resources</h2>
+<p><img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Guiding Questions</em></strong></p>
+<ul>
+<li>Who is responsible at each stage of the data lifecycle?<br>
+</li>
+<li>What infrastructure and support are available?<br>
+</li>
+<li>How do project, network, and institutional roles align?</li>
+</ul>
+</section>
+<section id="roles-resources-2" class="slide level2">
+<h2>Roles &amp; resources</h2>
+<p><img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core Elements</em></strong></p>
+<ul>
+<li><strong>Responsibility map</strong> ➡️ who does what at each lifecycle stage (RACI if helpful)<br>
+</li>
+<li><strong>Infrastructure &amp; tools</strong> ➡️ storage/backup, repositories, metadata tools, PID services, access provisioning<br>
+</li>
+<li><strong>Standards &amp; policies</strong> ➡️ data/metadata standards, licensing, sensitive/Indigenous protocols<br>
+</li>
+<li><strong>SOPs &amp; workflows</strong> ➡️ collection, QA/QC, versioning, handoff to archive<br>
+</li>
+<li><strong>Training &amp; support</strong> ➡️ what’s offered by ArcticNet/institution, when to use it</li>
+</ul>
+</section>
+<section id="roles-resources-3" class="slide level2">
+<h2>Roles &amp; resources</h2>
+<p><img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><strong><em>Core Elements</em></strong></p>
+<ul>
+<li><strong>Monitoring &amp; reporting</strong> ➡️ DMP update cadence, progress reports, breach procedures<br>
+</li>
+<li><strong>Budget &amp; time</strong> ➡️ storage/archival costs, curation effort<br>
+</li>
+<li><strong>Documentation &amp; continuity</strong> ➡️ READMEs, onboarding, turnover plan</li>
+</ul>
+</section>
+<section id="roles-resources-4" class="slide level2">
+<h2>Roles &amp; resources</h2>
+<p><img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<div class="callout callout-tip callout-titled callout-style-default">
+<div class="callout-body">
+<div class="callout-title">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Good Practices</strong></p>
+</div>
+<div class="callout-content">
+<div style="font-size: 80%;">
+<ul>
+<li>Assign clear roles (PI, data steward, team members) early<br>
+</li>
+<li>Use project checklists to track responsibilities<br>
+</li>
+<li>Build DMP updates into project milestones<br>
+</li>
+<li>Communicate regularly with ArcticNet’s RDM support team<br>
+</li>
+</ul>
+</div>
+</div>
+</div>
+</div>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="future" class="title-slide slide level1 center">
+<h1><em>Future</em></h1>
+<p>Emerging Trends &amp; Opportunities</p>
+<p>10 min</p>
+</section>
+<section id="the-future-of-rdm-in-irps" class="slide level2">
+<h2>The Future of RDM in IRPs</h2>
+<ul>
+<li>Large IRPs = diverse teams, methods, data cultures<br>
+</li>
+<li>Fully centralized governance is often impractical<br>
+</li>
+<li>Future opportunity lies in metadata interoperability<br>
+</li>
+<li>Structured, machine-readable metadata enriched with PIDs<br>
+</li>
+<li>Foundation for all downstream capabilities</li>
+</ul>
+</section>
+<section id="metadata-interoperability-first" class="slide level2">
+<h2>Metadata interoperability first</h2>
+<ul>
+<li>Describe data consistently across projects<br>
+</li>
+<li>Use structured fields + persistent identifiers (PIDs)
+<ul>
+<li>ORCID (people)<br>
+</li>
+<li>ROR (institutions)<br>
+</li>
+<li>DOI (datasets, publications)<br>
+</li>
+</ul></li>
+<li>Unlocks discovery, integration, and reuse at scale</li>
+</ul>
+</section>
+<section id="modular-not-monolithic" class="slide level2">
+<h2>Modular, not monolithic</h2>
+<ul>
+<li>Strategy: lightweight, interoperable tools<br>
+</li>
+<li>Preserve project autonomy while enabling network-wide coordination<br>
+</li>
+<li>Shared metadata practices &gt; centralized platforms<br>
+</li>
+<li>Example: visualization-led collaboration in other programs</li>
+</ul>
+</section>
+<section id="machine-actionable-dmps-madmps" class="slide level2">
+<h2>Machine-actionable DMPs (maDMPs)</h2>
+<ul>
+<li>Evolve traditional DMPs into dynamic metadata registries<br>
+</li>
+<li>Articulate practices using structured fields &amp; PIDs<br>
+</li>
+<li>Program-wide maDMPs can:
+<ul>
+<li>Feed repositories &amp; dashboards<br>
+</li>
+<li>Build PID graphs linking data–people–institutions–funding<br>
+</li>
+<li>Expose synergies &amp; track reuse</li>
+</ul></li>
+</ul>
+</section>
+<section id="new-capabilities-from-interoperability" class="slide level2">
+<h2>New capabilities from interoperability</h2>
+<ul>
+<li>Automated validation ➡️ check datasets archived as planned<br>
+</li>
+<li>Semantic search ➡️ discover data by concepts, not just keywords<br>
+</li>
+<li>Dashboards ➡️ visualize activity, reuse, collaboration networks<br>
+</li>
+<li>Reproducible workflows ➡️ connect metadata with pipelines (RO-Crate, Snakemake, Targets)</li>
+</ul>
+</section>
+<section id="ai-opportunities-for-irps" class="slide level2">
+<h2>AI opportunities for IRPs</h2>
+<ul>
+<li><strong>Structured metadata</strong> is the prerequisite for AI at scale<br>
+</li>
+<li>Enables automated knowledge graphs of people–data–projects<br>
+</li>
+<li>Supports cross-project synthesis and **trend discovery</li>
+<li>Moves RDM from compliance ➡️ intelligence infrastructure</li>
+</ul>
+</section>
+<section id="toward-fair-by-design-irps" class="slide level2">
+<h2>Toward FAIR-by-design IRPs</h2>
+<ul>
+<li>Embed metadata interoperability from project planning onward<br>
+</li>
+<li>Ensure data is discoverable, trackable, reusable by default<br>
+</li>
+<li>Strengthen attribution and impact reporting<br>
+</li>
+<li>Transform IRPs into knowledge hubs, not just funding umbrellas</li>
+</ul>
+</section>
+<section id="key-takeaways-3" class="slide level2">
+<h2>Key takeaways</h2>
+<ul>
+<li>Metadata interoperability is the foundation<br>
+</li>
+<li>Enables discovery, dashboards, reproducibility, AI-driven synthesis<br>
+</li>
+<li>Modular, interoperable tools preserve autonomy + foster coordination<br>
+</li>
+<li>FAIR-by-design = long-term visibility, collaboration, and impact</li>
+</ul>
+<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+</section></section>
+<section>
+<section id="qa" class="title-slide slide level1 center">
+<h1><em>Q&amp;A</em></h1>
+<p>10 min</p>
+</section>
+<section id="platforms-infrastructure" class="slide level2">
+<h2>Platforms infrastructure</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>What do they do, how</li>
+<li>Zenodo (https://www.openaire.eu/zenodo-relaunch)</li>
+<li>Open Science Framework</li>
+<li>figshare</li>
+<li>dataverse</li>
+<li>Siku</li>
+<li>PDC</li>
+</ul>
+</section>
+<section id="zenodo" class="slide level2">
+<h2>Zenodo</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>What is it? How ot works?</li>
+<li>https://www.openaire.eu/zenodo-relaunch</li>
+</ul>
+</section>
+<section id="dataverse-borealis" class="slide level2">
+<h2>Dataverse / Borealis</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>What is it? How ot works?</li>
+<li>https://dataverse.org/</li>
+</ul>
+</section>
+<section id="siku" class="slide level2">
+<h2>Siku</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>What is it? How ot works?</li>
+</ul>
+</section>
+<section id="pdc" class="slide level2">
+<h2>PDC</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>What is it? How ot works?</li>
+<li>https://polardata.ca/</li>
+</ul>
+</section>
+<section id="workflow" class="slide level2">
+<h2>Workflow</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<p><img data-src="img/data_flow.svg"></p>
+</section>
+<section id="sharing-and-reuse" class="slide level2">
+<h2>Sharing and Reuse</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>Who will access the data and when (open, embargoed, restricted)</li>
+<li>How data will be cited (DOIs or other persistent IDs)</li>
+<li>Licensing terms (e.g., CC-BY, custom agreements)</li>
+</ul>
+</section>
+<section id="legal-ethical-considerations" class="slide level2">
+<h2>Legal &amp; Ethical Considerations</h2>
+<p><img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
+<ul>
+<li>Privacy concerns, ethics approvals</li>
+<li>Indigenous data sovereignty and OCAP/CARE principles</li>
+<li>Embargo periods, licensing, or access restrictions</li>
+</ul>
+<!-- ## Slide with columns
+
+:::: {.columns}
+
+::: {.column width="40%"}
+Left column
+:::
+
+::: {.column width="60%"}
+Right column
+:::
+
+::::
+
+
+
+<!-- medata have big role to evenetually feed IA using IA as sythesis tool -->
+<!-- > Williamson HF, Brettschneider J, Caccamo M, Davey RP, Goble C, Kersey PJ, May S, Morris RJ, Ostler R, Pridmore T, Rawlings C, Studholme D, Tsaftaris SA, Leonelli S. 2023. Data management challenges for artificial intelligence in plant and agricultural research [version 2; peer review: 2 approved]. -->
+<!-- Not that I am blindly endorsing IA, however it's a Turing Machine that crunching and digesting data is every possible way, may provide insights -->
+<!-- ## Research Graph meta model -->
+<!-- ![](img/research_graph.png) -->
+<!-- > :book: Aryani A, et al. 2018. A Research Graph dataset for connecting research data repositories using RD-Switchboard. Scientific Data 5. DOI: 10.1038/sdata.2018.99. -->
+<!-- ## Raw vs processed data  -->
+<!-- > Some authors defend that data are realistically never raw, as they are always collected in a specific context that may be subject to bias and interpretation, which can have a significant impact on the results -->
+<!-- Don't think the actual voltage returned by any instrument is meaningful, so needs to add context (techno, intrument, etc.) and thus somewhat data are always sometime meaningful only after some treatment, e.g. sonar detection, etc. -->
+<!-- What data to be shared is discussed with the community -->
+<!-- Cunha-Oliveira T, Ioannidis JPA, Oliveira PJ. 2024. Best practices for data management and sharing in experimental biomedical research. Physiological Reviews 104:1387–1408. DOI: 10.1152/physrev.00043.2023. -->
+
+</section></section>
+    </div>
+  <div class="quarto-auto-generated-content" style="display: none;">
+<div class="footer footer-default">
+
+</div>
+</div></div>
+
+  <script>window.backupDefine = window.define; window.define = undefined;</script>
+  <script src="index_files/libs/revealjs/dist/reveal.js"></script>
+  <!-- reveal.js plugins -->
+  <script src="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.js"></script>
+  <script src="index_files/libs/revealjs/plugin/pdf-export/pdfexport.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/reveal-menu/quarto-menu.js"></script>
+  <script src="index_files/libs/revealjs/plugin/quarto-support/support.js"></script>
+  
+
+  <script src="index_files/libs/revealjs/plugin/notes/notes.js"></script>
+  <script src="index_files/libs/revealjs/plugin/search/search.js"></script>
+  <script src="index_files/libs/revealjs/plugin/zoom/zoom.js"></script>
+  <script src="index_files/libs/revealjs/plugin/math/math.js"></script>
+  <script>window.define = window.backupDefine; window.backupDefine = undefined;</script>
+
+  <script>
+
+      // Full list of configuration options available at:
+      // https://revealjs.com/config/
+      Reveal.initialize({
+'controlsAuto': true,
+'previewLinksAuto': false,
+'pdfSeparateFragments': false,
+'autoAnimateEasing': "ease",
+'autoAnimateDuration': 1,
+'autoAnimateUnmatched': true,
+'jumpToSlide': true,
+'menu': {"side":"left","useTextContentForMissingTitles":true,"markers":false,"loadIcons":false,"custom":[{"title":"Tools","icon":"<i class=\"fas fa-gear\"></i>","content":"<ul class=\"slide-menu-items\">\n<li class=\"slide-tool-item active\" data-item=\"0\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.fullscreen(event)\"><kbd>f</kbd> Fullscreen</a></li>\n<li class=\"slide-tool-item\" data-item=\"1\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.speakerMode(event)\"><kbd>s</kbd> Speaker View</a></li>\n<li class=\"slide-tool-item\" data-item=\"2\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.overview(event)\"><kbd>o</kbd> Slide Overview</a></li>\n<li class=\"slide-tool-item\" data-item=\"3\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.togglePdfExport(event)\"><kbd>e</kbd> PDF Export Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"4\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.toggleScrollView(event)\"><kbd>r</kbd> Scroll View Mode</a></li>\n<li class=\"slide-tool-item\" data-item=\"5\"><a href=\"#\" onclick=\"RevealMenuToolHandlers.keyboardHelp(event)\"><kbd>?</kbd> Keyboard Help</a></li>\n</ul>"}],"openButton":true},
+'smaller': false,
+ 
+        // Display controls in the bottom right corner
+        controls: false,
+
+        // Help the user learn the controls by providing hints, for example by
+        // bouncing the down arrow when they first encounter a vertical slide
+        controlsTutorial: false,
+
+        // Determines where controls appear, "edges" or "bottom-right"
+        controlsLayout: 'edges',
+
+        // Visibility rule for backwards navigation arrows; "faded", "hidden"
+        // or "visible"
+        controlsBackArrows: 'faded',
+
+        // Display a presentation progress bar
+        progress: true,
+
+        // Display the page number of the current slide
+        slideNumber: 'c/t',
+
+        // 'all', 'print', or 'speaker'
+        showSlideNumber: 'all',
+
+        // Add the current slide number to the URL hash so that reloading the
+        // page/copying the URL will return you to the same slide
+        hash: true,
+
+        // Start with 1 for the hash rather than 0
+        hashOneBasedIndex: false,
+
+        // Flags if we should monitor the hash and change slides accordingly
+        respondToHashChanges: true,
+
+        // Push each slide change to the browser history
+        history: true,
+
+        // Enable keyboard shortcuts for navigation
+        keyboard: true,
+
+        // Enable the slide overview mode
+        overview: true,
+
+        // Disables the default reveal.js slide layout (scaling and centering)
+        // so that you can use custom CSS layout
+        disableLayout: false,
+
+        // Vertical centering of slides
+        center: false,
+
+        // Enables touch navigation on devices with touch input
+        touch: true,
+
+        // Loop the presentation
+        loop: false,
+
+        // Change the presentation direction to be RTL
+        rtl: false,
+
+        // see https://revealjs.com/vertical-slides/#navigation-mode
+        navigationMode: 'linear',
+
+        // Randomizes the order of slides each time the presentation loads
+        shuffle: false,
+
+        // Turns fragments on and off globally
+        fragments: true,
+
+        // Flags whether to include the current fragment in the URL,
+        // so that reloading brings you to the same fragment position
+        fragmentInURL: false,
+
+        // Flags if the presentation is running in an embedded mode,
+        // i.e. contained within a limited portion of the screen
+        embedded: false,
+
+        // Flags if we should show a help overlay when the questionmark
+        // key is pressed
+        help: true,
+
+        // Flags if it should be possible to pause the presentation (blackout)
+        pause: true,
+
+        // Flags if speaker notes should be visible to all viewers
+        showNotes: false,
+
+        // Global override for autoplaying embedded media (null/true/false)
+        autoPlayMedia: null,
+
+        // Global override for preloading lazy-loaded iframes (null/true/false)
+        preloadIframes: null,
+
+        // Number of milliseconds between automatically proceeding to the
+        // next slide, disabled when set to 0, this value can be overwritten
+        // by using a data-autoslide attribute on your slides
+        autoSlide: 0,
+
+        // Stop auto-sliding after user input
+        autoSlideStoppable: true,
+
+        // Use this method for navigation when auto-sliding
+        autoSlideMethod: null,
+
+        // Specify the average time in seconds that you think you will spend
+        // presenting each slide. This is used to show a pacing timer in the
+        // speaker view
+        defaultTiming: null,
+
+        // Enable slide navigation via mouse wheel
+        mouseWheel: false,
+
+        // The display mode that will be used to show slides
+        display: 'block',
+
+        // Hide cursor if inactive
+        hideInactiveCursor: true,
+
+        // Time before the cursor is hidden (in ms)
+        hideCursorTime: 5000,
+
+        // Opens links in an iframe preview overlay
+        previewLinks: false,
+
+        // Transition style (none/fade/slide/convex/concave/zoom)
+        transition: 'fade',
+
+        // Transition speed (default/fast/slow)
+        transitionSpeed: 'default',
+
+        // Transition style for full page slide backgrounds
+        // (none/fade/slide/convex/concave/zoom)
+        backgroundTransition: 'none',
+
+        // Number of slides away from the current that are visible
+        viewDistance: 3,
+
+        // Number of slides away from the current that are visible on mobile
+        // devices. It is advisable to set this to a lower number than
+        // viewDistance in order to save resources.
+        mobileViewDistance: 2,
+
+        // The "normal" size of the presentation, aspect ratio will be preserved
+        // when the presentation is scaled to fit different resolutions. Can be
+        // specified using percentage units.
+        width: 1050,
+
+        height: 700,
+
+        // Factor of the display size that should remain empty around the content
+        margin: 0.1,
+
+        math: {
+          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          config: 'TeX-AMS_HTML-full',
+          tex2jax: {
+            inlineMath: [['\\(','\\)']],
+            displayMath: [['\\[','\\]']],
+            balanceBraces: true,
+            processEscapes: false,
+            processRefs: true,
+            processEnvironments: true,
+            preview: 'TeX',
+            skipTags: ['script','noscript','style','textarea','pre','code'],
+            ignoreClass: 'tex2jax_ignore',
+            processClass: 'tex2jax_process'
+          },
+        },
+
+        // reveal.js plugins
+        plugins: [QuartoLineHighlight, PdfExport, RevealMenu, QuartoSupport,
+
+          RevealMath,
+          RevealNotes,
+          RevealSearch,
+          RevealZoom
+        ]
+      });
+    </script>
+    <script id="quarto-html-after-body" type="application/javascript">
+      window.document.addEventListener("DOMContentLoaded", function (event) {
+        const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
+        tabsets.forEach(function(tabset) {
+          const tabby = new Tabby('#' + tabset.id);
+        });
+        const isCodeAnnotation = (el) => {
+          for (const clz of el.classList) {
+            if (clz.startsWith('code-annotation-')) {                     
+              return true;
+            }
+          }
+          return false;
+        }
+        const onCopySuccess = function(e) {
+          // button target
+          const button = e.trigger;
+          // don't keep focus
+          button.blur();
+          // flash "checked"
+          button.classList.add('code-copy-button-checked');
+          var currentTitle = button.getAttribute("title");
+          button.setAttribute("title", "Copied!");
+          let tooltip;
+          if (window.bootstrap) {
+            button.setAttribute("data-bs-toggle", "tooltip");
+            button.setAttribute("data-bs-placement", "left");
+            button.setAttribute("data-bs-title", "Copied!");
+            tooltip = new bootstrap.Tooltip(button, 
+              { trigger: "manual", 
+                customClass: "code-copy-button-tooltip",
+                offset: [0, -8]});
+            tooltip.show();    
+          }
+          setTimeout(function() {
+            if (tooltip) {
+              tooltip.hide();
+              button.removeAttribute("data-bs-title");
+              button.removeAttribute("data-bs-toggle");
+              button.removeAttribute("data-bs-placement");
+            }
+            button.setAttribute("title", currentTitle);
+            button.classList.remove('code-copy-button-checked');
+          }, 1000);
+          // clear code selection
+          e.clearSelection();
+        }
+        const getTextToCopy = function(trigger) {
+          const outerScaffold = trigger.parentElement.cloneNode(true);
+          const codeEl = outerScaffold.querySelector('code');
+          for (const childEl of codeEl.children) {
+            if (isCodeAnnotation(childEl)) {
+              childEl.remove();
+            }
+          }
+          return codeEl.innerText;
+        }
+        const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
+          text: getTextToCopy
+        });
+        clipboard.on('success', onCopySuccess);
+        if (window.document.getElementById('quarto-embedded-source-code-modal')) {
+          const clipboardModal = new window.ClipboardJS('.code-copy-button[data-in-quarto-modal]', {
+            text: getTextToCopy,
+            container: window.document.getElementById('quarto-embedded-source-code-modal')
+          });
+          clipboardModal.on('success', onCopySuccess);
+        }
+          var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+          var mailtoRegex = new RegExp(/^mailto:/);
+            var filterRegex = new RegExp('/' + window.location.host + '/');
+          var isInternal = (href) => {
+              return filterRegex.test(href) || localhostRegex.test(href) || mailtoRegex.test(href);
+          }
+          // Inspect non-navigation links and adorn them if external
+         var links = window.document.querySelectorAll('a[href]:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external):not([aria-hidden]):not(.dropdown-item):not(.quarto-navigation-tool):not(.about-link)');
+          for (var i=0; i<links.length; i++) {
+            const link = links[i];
+            if (!isInternal(link.href)) {
+              // undo the damage that might have been done by quarto-nav.js in the case of
+              // links that we want to consider external
+              if (link.dataset.originalHref !== undefined) {
+                link.href = link.dataset.originalHref;
+              }
+            }
+          }
+        function tippyHover(el, contentFn, onTriggerFn, onUntriggerFn) {
+          const config = {
+            allowHTML: true,
+            maxWidth: 500,
+            delay: 100,
+            arrow: false,
+            appendTo: function(el) {
+                return el.closest('section.slide') || el.parentElement;
+            },
+            interactive: true,
+            interactiveBorder: 10,
+            theme: 'light-border',
+            placement: 'bottom-start',
+          };
+          if (contentFn) {
+            config.content = contentFn;
+          }
+          if (onTriggerFn) {
+            config.onTrigger = onTriggerFn;
+          }
+          if (onUntriggerFn) {
+            config.onUntrigger = onUntriggerFn;
+          }
+            config['offset'] = [0,0];
+            config['maxWidth'] = 700;
+          window.tippy(el, config); 
+        }
+        const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+        for (var i=0; i<noterefs.length; i++) {
+          const ref = noterefs[i];
+          tippyHover(ref, function() {
+            // use id or data attribute instead here
+            let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+            try { href = new URL(href).hash; } catch {}
+            const id = href.replace(/^#\/?/, "");
+            const note = window.document.getElementById(id);
+            if (note) {
+              return note.innerHTML;
+            } else {
+              return "";
+            }
+          });
+        }
+        const findCites = (el) => {
+          const parentEl = el.parentElement;
+          if (parentEl) {
+            const cites = parentEl.dataset.cites;
+            if (cites) {
+              return {
+                el,
+                cites: cites.split(' ')
+              };
+            } else {
+              return findCites(el.parentElement)
+            }
+          } else {
+            return undefined;
+          }
+        };
+        var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+        for (var i=0; i<bibliorefs.length; i++) {
+          const ref = bibliorefs[i];
+          const citeInfo = findCites(ref);
+          if (citeInfo) {
+            tippyHover(citeInfo.el, function() {
+              var popup = window.document.createElement('div');
+              citeInfo.cites.forEach(function(cite) {
+                var citeDiv = window.document.createElement('div');
+                citeDiv.classList.add('hanging-indent');
+                citeDiv.classList.add('csl-entry');
+                var biblioDiv = window.document.getElementById('ref-' + cite);
+                if (biblioDiv) {
+                  citeDiv.innerHTML = biblioDiv.innerHTML;
+                }
+                popup.appendChild(citeDiv);
+              });
+              return popup.innerHTML;
+            });
+          }
+        }
+      });
+      </script>
+    
+
+</body></html>
