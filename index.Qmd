@@ -1,7 +1,6 @@
 ---
 title: "Research Data Management"
-author: "inSileco & ArcticNet"
-date: "2025-09-03"
+author: "inSileco"
 from: markdown+emoji
 format: 
   revealjs:
@@ -21,45 +20,36 @@ format:
 
 ## Webinar Structure  
 
-0. ***Welcome*** (5 min)
-1. ***Why*** (10 min)
-2. ***What*** (10 min)
-3. ***When & Who*** (10 min)
-4. ***How to Guide*** (45 min)
-5. ***Future*** (10 min)
-6. ***Q&A*** (10 min)
+<br>
 
-# *Welcome*
+:::: {.columns}
 
-## About us
+::: {.column width="50%"}
+#### PART I: RDM 
 
-::: {style="font-size: 100%;"}
-[![](img/who-we-are.png){width=100%}](https://insileco.io/){target="_blank"}
+1. ***Why***
+2. ***What***
+3. ***When & Who***
+4. ***How to Guide***
+5. ***Future***
+
 :::
 
-## About us 
+::: {.column width="50%"}
+#### PART II: Working together
 
-::: {style="text-align: center;"}
-[![](img/insileco.png){width=80%}](https://insileco.io/){target="_blank"}
+1. ***Data Hub***
+2. ***Borealis***
+
 :::
 
-## About us 
+:::: 
 
-***inSileco*** & ***ArcticNet*** **(since 2023)**
-
-- Develop criteria for project Data Management
-- Review and provide feedback on project Data Management Plans
-- Support researchers with RDM practices and tools
-- Maintain and expand ArcticNet’s long-term data archive
-- Deliver training and capacity building (e.g. this webinar)
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
+# PART I
 
 # *Why*
 
 Data & Open Science
-
-10 min
 
 ## More than papers  
 
@@ -79,7 +69,6 @@ Data & Open Science
 
 - Broad definition: **recorded information supporting research findings**  
   - could include various artefacts, e.g., 💻 code
-- Data can be **qualitative** or **quantitative** 
 - Data = information in a form that can be processed
   - often this means *structured collection of bits"
   - the structure = format 
@@ -104,12 +93,13 @@ Data & Open Science
 
 ::: {.column width="60%"}
 - New questions & horizons ➡️ more data  
-- Powerful technologies/tools enabling unprecedented data collection  
+- Powerful technologies enabling unprecedented data collection
+- AI exploiting massive data collection 
 - Ex: Large Hadron Collider ➡️ ~40 Zettabytes in 2017
 - Ex: GBIF
   - 125 million records in 2007 
   - 1.6 billion in 2020
-  - **1,150% increase in just 13 years**
+  - **1 150% increase in just 13 years**
 :::
 
 ::: {.column width="40%"}
@@ -168,18 +158,25 @@ Data & Open Science
   - We cannot collect past data
 :::
 
-::: {.column width="30%"}
-[![](img/annual_report.png){width=100%}](img/annual_report.png)
+::::
+
+
+
+## Why this matters for you
+
+::: {.callout-tip}
+### IRP: Interdisciplinary Research Program
 :::
 
-:::: 
+- Data is a **primary research output**  
+- Reduces risk of **data loss or inaccessibility**  
+- Proper management increases **visibility & citations**  
+- Strengthens **compliance** with funders & journals  
+- Builds a foundation for **collaboration in IRPs**
+  - data may be reuse in unexpected ways by colleagues
 
-:::footer
-[ArcticNet Annual Report 2022/23](https://arcticnet.ca/wp-content/uploads/2023/10/rapport_annuel_arcticnet_2022-23_ENG.pdf)
-:::
 
-
-## Open Science
+## Open Data for Open Science
 
 :::: {.columns}
 
@@ -214,25 +211,6 @@ Data & Open Science
 :::
 
 
-
-
-
-
-
-## Why this matters for you
-
-::: {.callout-tip}
-### IRP: Interdisciplinary Research Program
-:::
-
-- Data is now a **primary research output**  
-- Reduces risk of **data loss or inaccessibility**  
-- Proper management increases **visibility & citations**  
-- Strengthens **compliance** with funders & journals  
-- Builds a foundation for **collaboration in IRPs**
-  - data may be reuse in unexpected ways by colleagues
-
-
 ## Key takeaways
 
 - Research outputs go **beyond papers** ➡️ **data is central**  
@@ -242,13 +220,11 @@ Data & Open Science
 - Data management is not just compliance — it is a **path to better science**  
 
 
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # *What*
 
 Definition, Policies & Benefits
 
-10 min
 
 ## What is RDM?
 
@@ -315,33 +291,12 @@ Definition, Policies & Benefits
 :::
 
 
-## ArcticNet’s Policy (2025)
-
-::: {.callout-note}
-### More details available in the *How to Guide* 
-:::
-
-**Objectives**:  
-
-- Apply best practices in data stewardship (national & international standards)  
-- Maximize value through accessibility, reuse, and transparency
-- Encourage collaboration and responsible data sharing
-- Provide guidance for sensitive data
-- Respect Indigenous data sovereignty
-
-
-:::footer
-[ArcticNet Data Management Policy (2025)](https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf)
-:::
-
-<img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;">
-
 ## Key takeaways
 
 - RDM = **active management of research data** across its lifecycle  
 - Benefits are real: **visibility, efficiency, compliance, and collaboration**  
 - IRPs face special challenges: **scale, heterogeneity, collaboration, continuity**  
-- Policies matter: **Tri-Agency RDM Policy** (national) and **ArcticNet ADMP** (network) set the expectations  
+- Policies matter: **Tri-Agency RDM Policy** (national) and hopefully internal policies
 
 
 
@@ -350,7 +305,7 @@ Definition, Policies & Benefits
 
 Timeline, Roles & Responsibilities
 
-10 min
+
 
 ## Why timing matters in IRPs
 
@@ -434,8 +389,6 @@ Timeline, Roles & Responsibilities
 
 Building your Data Management Plan
 
-45 min
-
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 
 
@@ -469,7 +422,7 @@ Building your Data Management Plan
 
 ::: {style="font-size: 80%;"}
 :::{.incremental}
-- Required by many funders, including Tri-Agency and ArcticNet.  
+- Required by many funders, including Tri-Agency 
 - Ensures feasibility of research proposals  
 - Demonstrates responsible stewardship of public funds  
 - Sets expectations for storage, sharing, and preservation  
@@ -497,31 +450,6 @@ Building your Data Management Plan
 - Reduce duplication and improve program coherence  
 
 
-## ArcticNet Principles
-
-***In other words: what is expected of you as a researcher***
-
-
-::: {style="font-size: 80%;"}
-:::{.incremental}
-- ArcticNet funded data = a **public good** ➡️ as open as possible, as closed as necessary  
-- Researchers must ensure:  
-  - **Timely sharing** ➡️ data made publicly available quickly, unless restricted 
-  - **Publish metadata** ➡️ publish and share your metadata (e.g. Polar Data Catalog)
-  - **Respect for Indigenous rights** ➡️ uphold Inuit, First Nations, and Métis ownership, access, and control (CARE, OCAP®, NISR)  
-  - **Citable & preserved** ➡️ data should be publishable, citable, and preserved when appropriate  
-  - **Interoperability & connectivity** ➡️ link with Canadian & international Arctic data systems, avoid duplication  
-  - **Best practices** ➡️ follow ethical, legal, cultural, and funder requirements; use existing infrastructure where possible  
-  - **Support & guidance** ➡️ researchers engage with training, outreach, and resources provided  
-:::
-:::
-
-:::footer
-[ArcticNet Data Management Policy (2025)](https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf)
-:::
-
-<img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;">
-
 
 ## Key sections of a DMP
 
@@ -537,8 +465,7 @@ Building your Data Management Plan
 4. <i class="fa-regular fa-circle"></i> **Data Analysis** ➡️ How will the data be analyzed? 
 5. <i class="fa-regular fa-circle"></i> **Preservation & archiving** ➡️ Which repository, which formats for long-term?  
 6. <i class="fa-regular fa-circle"></i> **Sharing & reuse** ➡️ Who can access it, when, under what license?  
-7. <i class="fa-regular fa-circle"></i> **Legal & ethics** ➡️ How are legal, privacy, consent, Indigenous data rights addressed?  
-8. <i class="fa-regular fa-circle"></i> **Roles & resources** ➡️ Who is responsible and what infrastructure is needed?  
+7. <i class="fa-regular fa-circle"></i> **Legal & ethics** ➡️ How are legal, privacy, consent, Indigenous data rights addressed?
 :::
 :::
 
@@ -698,8 +625,6 @@ Building your Data Management Plan
 <i class="fa-regular fa-circle"></i> *Sharing & reuse*
 
 <i class="fa-regular fa-circle"></i> *Legal & ethics*
-
-<i class="fa-regular fa-circle"></i> *Roles & resources*
 
 :::
 
@@ -900,9 +825,9 @@ See next section for Metadata standards.
 ::: {style="font-size: 80%;"}
 - **Documentation practices** ➡️ lab/field notebooks, data dictionaries, README files, protocols  
 - **Metadata standards** ➡️ Dublin Core, ISO 19115, Darwin Core, DataCite Schema  
-- **Tools & platforms** ➡️ Polar Data Catalogue, FRDR, ISA tools  
+- **Tools & platforms** ➡️ Borealis, FRDR, ISA tools  
 - **Timing** ➡️ start at project onset, update regularly, finalize at archiving  
-- **Interoperability** ➡️ controlled vocabularies, ontologies, persistent identifiers (DOI, ORCID, ROR)  
+- **Interoperability** ➡️ controlled vocabularies, ontologies
 :::
 
 <img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
@@ -963,7 +888,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 - Flexible: can be embedded in repositories, DOIs, web pages  
 
 **Example pattern:**  
-- `dc:title` ➡️ "ArcticNet Water Sampling Data 2025"  
+- `dc:title` ➡️ "Water Sampling Data 2025"  
 - `dc:creator` ➡️ "Smith, J."  
 - `dc:date` ➡️ "2025-04-15"  
 
@@ -975,7 +900,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ```xml
 <record>
-  <dc:title>ArcticNet Water Sampling Data 2025</dc:title>
+  <dc:title>Water Sampling Data 2025</dc:title>
   <dc:creator>Smith, J.</dc:creator>
   <dc:subject>Oceanography</dc:subject>
   <dc:date>2025-04-15</dc:date>
@@ -983,57 +908,6 @@ Metadata standards describe the data itself (context & discovery), while data st
   <dc:identifier>doi:10.12345/abcd</dc:identifier>
 </record>
 ```
-
-## Documentation & metadata  
-
-<img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;">
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {.callout-important}
-### ArcticNet's requirements
-
-::: {style="font-size: 80%;"}
-- Starting year 2, researchers must provide links to metadata records in recognized repositories  
-- Metadata must be openly accessible
-- Funding will be withheld if metadata records are missing or inaccessible  
-- For Indigenous-owned data ➡️ researchers must identify the organization responsible for storing and managing it
-  - Metadata publication is still required
-:::
-:::
-:::
-
-::: {.column width="50%"}
-::: {.callout-note}
-### ArcticNet's commitment
-
-::: {style="font-size: 80%;"}
-***Role:***
-
-- Define metadata standards for projects  
-- Support researchers in preparing metadata  
-- Provide tools/templates to ease metadata submission  
-
-***Initiatives***  
-
-- Working with Polar Data Catalogue (PDC) to host project metadata  
-- Providing a PDC metadata template
-- Offering support for preparation and submission
-:::
-:::
-:::
-
-::::
-
-:::footer
-[ArcticNet Data Management Policy (2025)](https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf)
-&nbsp; ***·*** &nbsp;
-[Pacharra *et al.* 2025. From Bench to Brain: A Metadata-driven Approach to Research Data Management in a Collaborative Neuroscientific Research Center.](https://datascience.codata.org/articles/10.5334/dsj-2025-002)
-:::
-
-
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -1049,12 +923,13 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ***Guiding Questions***
 
-- Where will data be stored during the project?  
-- How will it be protected (backups, encryption, access controls)?  
-- Who is responsible for managing storage & protection?  
-- How long must the data be kept?  
+- Where will data be stored during the project (primary and working locations)?
+- How often are backups made, where are they stored, and are they automated?
+- Who can access the data, and how is access protected?
+- How will you detect data corruption or unintended changes?
+- How much data will be generated, and can the storage system handle growth and performance needs?
+- Who provides, pays for, and maintains storage and backup infrastructure?
 
-*These answers ensure your DMP covers both security and reliability.*
 
 ## Storage & protection
 
@@ -1200,7 +1075,7 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 <img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
-- **Trusted repositories** ➡️ Polar Data Catalogue, FRDR, Nordicana-D, Dryad, Zenodo, GBIF, OBIS  
+- **Trusted repositories** ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS
 - **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)  
 - **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core) 
 - **Licensing** ➡️ CC-BY, CC0, or custom terms  
@@ -1275,8 +1150,8 @@ Metadata standards describe the data itself (context & discovery), while data st
 ***Data repositories***
 
 - Institutional ➡️ university libraries, research data services  
-- National ➡️ Federated Research Data Repository (FRDR), Nordicana-D  
-- Disciplinary ➡️ Polar Data Catalogue, GBIF, OBIS, GenBank, ICPSR  
+- National ➡️ Federated Research Data Repository (FRDR), Borealis
+- Disciplinary ➡️ GBIF, OBIS, GenBank, ICPSR  
 - General-purpose ➡️ Zenodo, Dryad, Figshare, Dataverse
 
 ***Choose a repository that is:***
@@ -1295,49 +1170,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 [Dataverse](https://dataverse.org/)
 :::
 
-
-
-## Preservation & archiving  
-
-<img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;">
-
-
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {.callout-important}
-### ArcticNet's requirements
-
-::: {style="font-size: 80%;"}
-- No centralized ArcticNet repository ➡️ projects choose suitable long-term repository  
-- Prefer certified, open-access options (PDC, Nordicana-D, GBIF, OBIS, FRDR)  
-- Deposit all data and metadata supporting results  
-- Plan early, use non-proprietary formats (CSV, TIFF, NetCDF)  
-- Retain data as long as required by stakeholders and funders  
-- State in DMP what will be preserved and any restrictions  
-:::
-:::
-:::
-
-::: {.column width="50%"}
-::: {.callout-note}
-### ArcticNet's guidance
-
-::: {style="font-size: 80%;"}
-- Researchers decide the most appropriate repository for their discipline and data type  
-- Focus on repository sustainability, DOIs, and open access  
-- Preservation can include raw, processed, and derived data when valuable  
-- Sensitive or Indigenous data may need restricted access or safeguards  
-- Rationale for retention and preservation must be clear in the DMP  
-:::
-:::
-:::
-
-::::
-
-:::footer
-[ArcticNet Data Management Policy (2025)](https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf)
-:::
 
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
@@ -1433,46 +1265,6 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 ::::
 
-## Sharing & reuse  
-
-<img src="img/logo_articnet.svg" style="height:50px; position:absolute; top:-30px; right:-150px;">
-
-:::: {.columns}
-
-::: {.column width="50%"}
-::: {.callout-important}
-### ArcticNet's requirements
-
-::: {style="font-size: 80%;"}
-- Data must be findable, accessible, interoperable, and reusable (FAIR)  
-- Metadata published early in a recognized catalogue (e.g., re3data, PDC, FRDR)  
-- Deposit data in a trusted repository with persistent identifiers (DOIs)  
-- Users must cite and acknowledge data creators  
-- Any restrictions (sensitive, Indigenous, security) must be justified in the DMP  
-:::
-:::
-:::
-
-::: {.column width="50%"}
-::: {.callout-note}
-### ArcticNet's guidance
-
-::: {style="font-size: 80%;"}
-- Make data available as openly and quickly as possible, with minimal delay  
-- “As open as possible, as closed as necessary” (ethical and legal considerations)  
-- Indigenous and sensitive data require safeguards, informed consent, and respect for sovereignty (CARE, OCAP®, NISR)  
-- Embargoes or restricted access may apply, but must be transparent and time-limited  
-- Data access requests should not be unreasonably denied  
-:::
-:::
-:::
-
-::::
-
-:::footer
-[ArcticNet Data Management Policy (2025)](https://arcticnet.ca/wp-content/uploads/2025/03/ArcticNet-Data-Management-Policy-ADMP_Approved-March-2025.pdf)
-:::
-
 
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # Legal & ethics
@@ -1484,6 +1276,19 @@ Metadata standards describe the data itself (context & discovery), while data st
 ## Legal & ethics
 
 <img src="img/legal.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
+
+::: {.callout-tip}
+### PII: Personally Identifiable Information
+:::
+
+::: {.callout-tip}
+### REB = Research Ethics Board
+:::
+
+::: {.callout-tip}
+### IRB = Institutional Review Board
+:::
+
 
 ***Guiding Questions***
 
@@ -1544,68 +1349,13 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-# Roles & resources
-
-<div style="width:20%; margin: 0 auto;">
-  <img src="img/roles.png">
-</div>
-
-## Roles & resources
-
-<img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-***Guiding Questions***
-
-- Who is responsible at each stage of the data lifecycle?  
-- What infrastructure and support are available?  
-- How do project, network, and institutional roles align?  
-
-## Roles & resources
-
-<img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-***Core Elements***
-
-- **Responsibility map** ➡️ who does what at each lifecycle stage (RACI if helpful)  
-- **Infrastructure & tools** ➡️ storage/backup, repositories, metadata tools, PID services, access provisioning  
-- **Standards & policies** ➡️ data/metadata standards, licensing, sensitive/Indigenous protocols  
-- **SOPs & workflows** ➡️ collection, QA/QC, versioning, handoff to archive  
-- **Training & support** ➡️ what’s offered by ArcticNet/institution, when to use it  
 
 
-## Roles & resources
-
-<img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-***Core Elements***
-
-- **Monitoring & reporting** ➡️ DMP update cadence, progress reports, breach procedures  
-- **Budget & time** ➡️ storage/archival costs, curation effort  
-- **Documentation & continuity** ➡️ READMEs, onboarding, turnover plan
-
-## Roles & resources
-
-<img src="img/roles.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-::: {.callout-tip}
-### Good Practices
-
-::: {style="font-size: 80%;"}
-- Assign clear roles (PI, data steward, team members) early  
-- Use project checklists to track responsibilities  
-- Build DMP updates into project milestones  
-- Communicate regularly with ArcticNet’s RDM support team  
-:::
-:::
-
-
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 # *Future*
 
 Emerging Trends & Opportunities
 
-10 min
+
 
 ## The Future of RDM in IRPs
 
@@ -1671,7 +1421,6 @@ Emerging Trends & Opportunities
 - Transform IRPs into knowledge hubs, not just funding umbrellas  
 
 
-
 ## Key takeaways
 
 - Metadata interoperability is the foundation  
@@ -1679,54 +1428,6 @@ Emerging Trends & Opportunities
 - Modular, interoperable tools preserve autonomy + foster coordination  
 - FAIR-by-design = long-term visibility, collaboration, and impact  
 
-<!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
-# *Q&A*
-
-10 min
-
-
-
-
-## Platforms infrastructure
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- What do they do, how
-- Zenodo (https://www.openaire.eu/zenodo-relaunch)
-- Open Science Framework 
-- figshare
-- dataverse
-- Siku
-- PDC 
-
-
-## Zenodo 
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- What is it? How ot works?
-- https://www.openaire.eu/zenodo-relaunch
-
-## Dataverse / Borealis
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- What is it? How ot works?
-- https://dataverse.org/
-
-
-## Siku
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- What is it? How ot works?
-
-## PDC
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- What is it? How ot works?
-- https://polardata.ca/
 
 
 
@@ -1736,65 +1437,7 @@ Emerging Trends & Opportunities
 
 ![](img/data_flow.svg)
 
-## Sharing and Reuse
 
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
+# PART II 
 
-- Who will access the data and when (open, embargoed, restricted)
-- How data will be cited (DOIs or other persistent IDs)
-- Licensing terms (e.g., CC-BY, custom agreements)
-
-
-## Legal & Ethical Considerations
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-- Privacy concerns, ethics approvals
-- Indigenous data sovereignty and OCAP/CARE principles
-- Embargo periods, licensing, or access restrictions
-
-
-
-
-
-<!-- ## Slide with columns
-
-:::: {.columns}
-
-::: {.column width="40%"}
-Left column
-:::
-
-::: {.column width="60%"}
-Right column
-:::
-
-::::
-
-
-
-<!-- medata have big role to evenetually feed IA using IA as sythesis tool -->
-
-<!-- > Williamson HF, Brettschneider J, Caccamo M, Davey RP, Goble C, Kersey PJ, May S, Morris RJ, Ostler R, Pridmore T, Rawlings C, Studholme D, Tsaftaris SA, Leonelli S. 2023. Data management challenges for artificial intelligence in plant and agricultural research [version 2; peer review: 2 approved]. -->
-
-<!-- Not that I am blindly endorsing IA, however it's a Turing Machine that crunching and digesting data is every possible way, may provide insights -->
-
-
-
-<!-- ## Research Graph meta model -->
-
-<!-- ![](img/research_graph.png) -->
-
-<!-- > :book: Aryani A, et al. 2018. A Research Graph dataset for connecting research data repositories using RD-Switchboard. Scientific Data 5. DOI: 10.1038/sdata.2018.99. -->
-
-
-
-
-<!-- ## Raw vs processed data  -->
-
-<!-- > Some authors defend that data are realistically never raw, as they are always collected in a specific context that may be subject to bias and interpretation, which can have a significant impact on the results -->
-
-<!-- Don't think the actual voltage returned by any instrument is meaningful, so needs to add context (techno, intrument, etc.) and thus somewhat data are always sometime meaningful only after some treatment, e.g. sonar detection, etc. -->
-<!-- What data to be shared is discussed with the community -->
-
-<!-- Cunha-Oliveira T, Ioannidis JPA, Oliveira PJ. 2024. Best practices for data management and sharing in experimental biomedical research. Physiological Reviews 104:1387–1408. DOI: 10.1152/physrev.00043.2023. -->
+## Borealis
