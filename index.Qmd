@@ -1440,4 +1440,50 @@ Emerging Trends & Opportunities
 
 # PART II 
 
-## Borealis
+# Borealis
+
+## [Dataverse](https://dataverse.org)
+
+> A collaboration with the Institute for Quantitative Social Science (IQSS), the Harvard Library, and Harvard University Information Technology (HUIT): the Harvard Dataverse is a repository for sharing, citing, analyzing, and preserving research data. It is open to all scientific data from all disciplines worldwide. 
+
+- 💻 <https://github.com/IQSS/dataverse>
+
+[![](img/borealis_commits.png){width=50%}](img/borealis_commits.png)
+
+:::footer 
+<https://en.wikipedia.org/wiki/Dataverse>
+:::
+
+
+
+## Two Canadian installations
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+### [Abascus](https://abacus.library.ubc.ca/)
+
+[![](img/borealis_abascus.png)](img/borealis_abascus.png)
+
+:::
+
+::: {.column width="50%"}
+
+### [Borealis](https://borealisdata.ca/)
+
+[![](img/borealis_toronto.png)](img/borealis_toronto.png)
+
+:::
+
+::::
+
+## [Borealis](https://borealisdata.ca/)
+
+::: {.callout-tip}
+OCUL = Ontario Council of University Libraries
+::: 
+
+> In Canada, Borealis is a national instance of the Dataverse repository hosted by OCUL's Scholars Portal at the University of Toronto.
+
+Support at Guelph at UoG library.
