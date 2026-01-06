@@ -70,7 +70,7 @@ Data & Open Science
 - Broad definition: **recorded information supporting research findings**  
   - could include various artefacts, e.g., 💻 code
 - Data = information in a form that can be processed
-  - often this means *structured collection of bits"
+  - often this means "structured collection of bits"
   - the structure = format 
   - spreadsheet, images, etc.
 - Useful lens: the **5 V’s of Big Data**  
@@ -173,7 +173,7 @@ Data & Open Science
 - Proper management increases **visibility & citations**  
 - Strengthens **compliance** with funders & journals  
 - Builds a foundation for **collaboration in IRPs**
-  - data may be reuse in unexpected ways by colleagues
+  - data may be reused in unexpected ways by colleagues
 
 
 ## Open Data for Open Science
@@ -213,8 +213,8 @@ Data & Open Science
 
 ## Key takeaways
 
-- Research outputs go **beyond papers** ➡️ **data is central**  
-- The **explosion & heterogeneity** of data offers new horizons and create new technical challenges  
+- Research outputs go **beyond papers** ➡️ **data is central**
+- The **explosion & heterogeneity** of data offers new horizons and creates new technical challenges  
 - The **Open Science movement** drives funder and journal expectations  
 - For IRPs, effective data management enables **collaboration, compliance, and visibility**  
 - Data management is not just compliance — it is a **path to better science**  
@@ -483,7 +483,7 @@ Building your Data Management Plan
 ## Good practices
 
 :::{.callout-tip}
-### Tips to DMP by
+### DMP Tips
 
 :::{.incremental}
 - **Start early** ➡️ draft DMP in the proposal stage  
@@ -535,7 +535,7 @@ Building your Data Management Plan
 ::: {.column width="60%"}
 ::: {style="font-size: 80%;"}
 - `(C)` Collective Benefit
-- `(A)` Autority to Control
+- `(A)` Authority to Control
 - `(R)` Responsibility
 - `(E)` Ethics
 
@@ -766,8 +766,8 @@ See next section for Metadata standards.
 ***Organization & naming***
 
 ::: {style="font-size: 80%;"}
-- Use **consistent, descriptive file & folder names**  
-- Avoid spaces/special characters ➡️ use `_` or `-`
+- Use **consistent, descriptive file & folder names**
+- Avoid spaces/special characters ➡️ use `_` or `-`.
 - Include **versioning & dates** (e.g., `projectA_samples_2025-03-01_v1.csv`)  
 - Organize folders by project/study/site/date rather than by researcher’s preference  
 - Use **controlled vocabularies / ontologies** where available ➡️ interoperability
@@ -1023,9 +1023,9 @@ Metadata standards describe the data itself (context & discovery), while data st
 ### Good Practices
 
 ::: {style="font-size: 80%;"}
-- Prefer open-source tools when feasible  
-- Share analysis scripts with your datasets  
-- Keep raw and processed data separate
+- Prefer open-source tools when feasible
+- Share analysis scripts with your datasets
+- Keep raw and processed data separate.
 - Document assumptions, parameters, and software versions  
 
 *Builds trust, efficiency, and long-term usability of results*
@@ -1076,9 +1076,9 @@ Metadata standards describe the data itself (context & discovery), while data st
 <img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
 - **Trusted repositories** ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS
-- **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)  
-- **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core) 
-- **Persistent identifiers** ➡️ DOI, URI
+- **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)
+- **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core)
+- **Persistent identifiers** ➡️ DOI, URI.
 - **Retention period** ➡️ typically ≥ 5–10 years, ideally indefinite 
 
 
@@ -1400,9 +1400,9 @@ Emerging Trends & Opportunities
 
 ## AI opportunities for IRPs
 
-- **Structured metadata** is the prerequisite for AI at scale  
-- Enables automated knowledge graphs of people–data–projects  
-- Supports cross-project synthesis and **trend discovery
+- **Structured metadata** is the prerequisite for AI at scale
+- Enables automated knowledge graphs of people–data–projects
+- Supports cross-project synthesis and **trend discovery**
 - Moves RDM from compliance ➡️ intelligence infrastructure 
 
 ## Toward FAIR-by-design IRPs
@@ -1485,4 +1485,28 @@ OCUL = Ontario Council of University Libraries
 
 > In Canada, Borealis is a national instance of the Dataverse repository hosted by OCUL's Scholars Portal at the University of Toronto.
 
-Support at Guelph at UoG library.
+- Support at Guelph at UoG library.
+- CEM repository: <https://borealisdata.ca/dataverse/cem>
+
+
+## With Borealis 
+
+- You are using a TRUST platform that respects FAIR principles
+- You will have to fill out metadata and proper standard will be used
+- The archiving portion of the DMP is hence taken care of
+
+- Example: <https://borealisdata.ca/dataverse/doib>
+- Resources
+  - [Template](https://borealisdata.ca/dataset.xhtml?persistentId=doi:10.5683/SP2/CPHFGA)
+  - [Writing README](https://guides.lib.uoguelph.ca/c.php?g=738963&p=5374594)
+
+
+## From local spreadsheet to FAIR datasets
+
+[![](img/borealis_spreadsheet1.png)](img/borealis_spreadsheet1.png)
+
+
+## From local spreadsheet to FAIR datasets
+
+[![](img/borealis_spreadsheet2.png)](img/borealis_spreadsheet2.png)
+
