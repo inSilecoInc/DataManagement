@@ -1432,4 +1432,11 @@ Emerging Trends & Opportunities
 
 # PART II 
 
+## Data Hub
+
+<a href="https://019b8fdd-da08-04e4-50a3-8f9cb793bb4d.share.connect.posit.cloud/?private_link_token=he3qjM9FV402fkZvDa39yseIO4EcZ79qrYRxmRLmLWRJaZ9ZV8vSfsSmPyS528Bn" target="_blank">
+  <img src="img/datahub.png">
+</a>
+
+
 ## Borealis
