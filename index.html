@@ -6,8 +6,8 @@
 <script src="index_files/libs/quarto-html/tippy.umd.min.js"></script>
 <link href="index_files/libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="index_files/libs/quarto-html/light-border.css" rel="stylesheet">
-<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-587c61ba64f3a5504c4d52d930310e48.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.8.26">
+<link href="index_files/libs/quarto-html/quarto-syntax-highlighting-e1a5c8363afafaef2c763b6775fbf3ca.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.7.31">
 
   <meta name="author" content="inSileco">
   <title>Research Data Management</title>
@@ -95,7 +95,7 @@
     code span.vs { color: #20794d; } /* VerbatimString */
     code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
-  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-f1376d11060272321dd1129bb042e933.css">
+  <link rel="stylesheet" href="index_files/libs/revealjs/dist/theme/quarto-c4e4f9f929ca940a2f664cf23af93834.css">
   <link rel="stylesheet" href="styles.css">
   <link href="index_files/libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="index_files/libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
@@ -901,6 +901,7 @@ inSileco
 <h2>Goal</h2>
 <p><strong><em>Let us create a DMP together. Let’s start <a href="https://tally.so/r/QKekoX">here</a>.</em></strong></p>
 <p><a href="https://tally.so/r/QKekoX" target="_blank"> <img src="img/tally.png"> </a></p>
+<p><img src="img/tally_qr.png" style="height:150px; position:absolute; top:-30px; right:-30px;"></p>
 </section>
 <section id="checklist" class="slide level2">
 <h2>Checklist</h2>
@@ -1131,14 +1132,14 @@ inSileco
 <h2>Documentation &amp; metadata</h2>
 <p><img src="img/metadata.png" style="height:70px; position:absolute; top:-30px; right:-30px;"></p>
 <p><strong><em>Dublin Core: Example Record</em></strong></p>
-<div class="code-copy-outer-scaffold"><div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource xml number-lines code-with-copy"><code class="sourceCode xml"><span id="cb1-1"><a href=""></a>&lt;<span class="kw">record</span>&gt;</span>
 <span id="cb1-2"><a href=""></a>  &lt;<span class="kw">dc:title</span>&gt;Water Sampling Data 2025&lt;/<span class="kw">dc:title</span>&gt;</span>
 <span id="cb1-3"><a href=""></a>  &lt;<span class="kw">dc:creator</span>&gt;Smith, J.&lt;/<span class="kw">dc:creator</span>&gt;</span>
 <span id="cb1-4"><a href=""></a>  &lt;<span class="kw">dc:subject</span>&gt;Oceanography&lt;/<span class="kw">dc:subject</span>&gt;</span>
 <span id="cb1-5"><a href=""></a>  &lt;<span class="kw">dc:date</span>&gt;2025-04-15&lt;/<span class="kw">dc:date</span>&gt;</span>
 <span id="cb1-6"><a href=""></a>  &lt;<span class="kw">dc:format</span>&gt;CSV&lt;/<span class="kw">dc:format</span>&gt;</span>
 <span id="cb1-7"><a href=""></a>  &lt;<span class="kw">dc:identifier</span>&gt;doi:10.12345/abcd&lt;/<span class="kw">dc:identifier</span>&gt;</span>
-<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code></pre></div><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></div>
+<span id="cb1-8"><a href=""></a>&lt;/<span class="kw">record</span>&gt;</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <!-- ~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~ -->
 </section></section>
 <section>
@@ -2097,7 +2098,7 @@ inSileco
         margin: 0.1,
 
         math: {
-          mathjax: 'https://cdn.jsdelivr.net/npm/mathjax@2.7.9/MathJax.js',
+          mathjax: 'https://cdnjs.cloudflare.com/ajax/libs/mathjax/2.7.9/MathJax.js',
           config: 'TeX-AMS_HTML-full',
           tex2jax: {
             inlineMath: [['\\(','\\)']],
@@ -2171,14 +2172,13 @@ inSileco
           e.clearSelection();
         }
         const getTextToCopy = function(trigger) {
-          const outerScaffold = trigger.parentElement.cloneNode(true);
-          const codeEl = outerScaffold.querySelector('code');
-          for (const childEl of codeEl.children) {
-            if (isCodeAnnotation(childEl)) {
-              childEl.remove();
+            const codeEl = trigger.previousElementSibling.cloneNode(true);
+            for (const childEl of codeEl.children) {
+              if (isCodeAnnotation(childEl)) {
+                childEl.remove();
+              }
             }
-          }
-          return codeEl.innerText;
+            return codeEl.innerText;
         }
         const clipboard = new window.ClipboardJS('.code-copy-button:not([data-in-quarto-modal])', {
           text: getTextToCopy
