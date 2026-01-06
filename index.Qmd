@@ -1002,16 +1002,9 @@ Metadata standards describe the data itself (context & discovery), while data st
 
 <img src="img/archiving.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
 
-<<<<<<< HEAD
 - **Trusted repositories** ➡️ Borealis, FRDR, Dryad, Zenodo, GBIF, OBIS
 - **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)  
 - **Persistent identifiers** ➡️ DOI, URI
-=======
-- **Trusted repositories** ➡️ FRDR, Borealis, Dryad, Zenodo, GBIF, OBIS
-- **Preservation formats** ➡️ CSV, NetCDF, GeoTIFF, JSON (avoid lossy formats like JPEG, MP3)
-- **Metadata** ➡️ complete, standardized (ISO 19115, Dublin Core, Darwin Core)
-- **Persistent identifiers** ➡️ DOI, URI.
->>>>>>> 24b56ea (Complete Borealis section)
 - **Retention period** ➡️ typically ≥ 5–10 years, ideally indefinite 
 
 
@@ -1442,16 +1435,6 @@ OCUL = Ontario Council of University Libraries
 
 > In Canada, Borealis is a national instance of the Dataverse repository hosted by OCUL's Scholars Portal at the University of Toronto.
 
-<<<<<<< HEAD
-Support at Guelph at UoG library.
-
-
-## Workflow 
-
-<img src="img/archiving_icon.png" style="height:70px; position:absolute; top:-30px; right:-30px;">
-
-![](img/data_flow.svg)
-=======
 - Support at Guelph at UoG library.
 - CEM repository: <https://borealisdata.ca/dataverse/cem>
 
@@ -1476,5 +1459,4 @@ Support at Guelph at UoG library.
 ## From local spreadsheet to FAIR datasets
 
 [![](img/borealis_spreadsheet2.png)](img/borealis_spreadsheet2.png)
->>>>>>> 24b56ea (Complete Borealis section)
 
