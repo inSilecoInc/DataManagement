@@ -1462,3 +1462,8 @@ OCUL = Ontario Council of University Libraries
 
 [![](img/borealis_spreadsheet2.png)](img/borealis_spreadsheet2.png)
 
+
+# Working together
+
+<!-- <img src="img/tally_qr.png" style="height:150px; position:absolute; top:-30px; right:-30px;"> -->
+<img src="img/tally_qr.png" style="height:200px">
